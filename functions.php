@@ -1,11 +1,20 @@
 <?php
 
+//styles & scripts
+function nataliemota_enqueue_scripts() {
+    wp_enqueue_style('nataliemota-main', get_template_directory_uri() . '/assets/css/main.css', array(), '1.0', 'all');
+}
+
+add_action('wp_enqueue_scripts', 'nataliemota_enqueue_scripts');
+
+
+
 
 
 
 // MENUS
 add_action('after_setup_theme', function() {
-    // Creation des massives avec les parametres pour les add_theme_support
+ // Creation of arrays with parameters for add_theme_support
     $nmLogo = [
         'height' => 14,
         'width' => 216,
@@ -20,8 +29,6 @@ add_action('after_setup_theme', function() {
     add_theme_support('title-tag');
     add_theme_support('custom-logo', $nmLogo);
     add_theme_support('post-thumbnails');
-
 });
-
 
 
