@@ -1,10 +1,11 @@
 <?php wp_footer(); ?>
-<?php
-    wp_nav_menu( array(
-        'theme_location' => 'footer',
-        'menu_id'        => 'footer-menu',
-    ) );
-    ?>
-
+    <div id="footer-menu">
+    <?php
+        wp_nav_menu( array(
+            'theme_location' => 'footer',
+            'menu_id'        => 'footer-menu',
+        ) );
+        ?>
+    </div>
 </body>
 </html>

@@ -1,3 +1,40 @@
+ul {
+  display: flex;
+  flex-direction: row;
+}
+ul li {
+  text-transform: uppercase;
+  list-style-type: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+ul li a {
+  text-decoration: none;
+  color: black;
+}
 
+#primary-menu {
+  width: 100%;
+  max-width: 1440px;
+  margin-right: 146px;
+}
+
+.primary-menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 634px;
+  max-width: 1440px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.primary-menu-wrapper img {
+  margin-left: 148px;
+}
+
+.primary-menu-wrapper .nav {
+  display: flex;
+}
 
 /*# sourceMappingURL=main.css.map */

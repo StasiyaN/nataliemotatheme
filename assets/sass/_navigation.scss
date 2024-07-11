@@ -1,0 +1,46 @@
+//general style for all ul li
+ul {
+    display: flex;
+    flex-direction: row;
+li {
+    text-transform: uppercase;
+    list-style-type: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+}
+
+//main menu
+#primary-menu {
+    width: 100%;
+    max-width: 1440px;
+    margin-right: 146px;
+}
+.primary-menu-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    gap: 634px; // adjust later
+    max-width: 1440px;
+    height: 80px;
+    margin: 0 auto; //to verify
+}
+
+.primary-menu-wrapper img {
+    margin-left: 148px;
+}
+.primary-menu-wrapper .nav {
+    display: flex;
+}
+//footer-menu
+
+
+
+
+
+
+
