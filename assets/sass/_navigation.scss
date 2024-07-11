@@ -5,15 +5,14 @@ ul {
 li {
     text-transform: uppercase;
     list-style-type: none;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 22.5px;
+    margin-right: 22.5px;
     a {
         text-decoration: none;
         color: black;
     }
 }
 }
-
 //main menu
 #primary-menu {
     width: 100%;
@@ -37,6 +36,14 @@ li {
     display: flex;
 }
 //footer-menu
+#footer-menu {
+    width: 100%;
+    max-width: 1440px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 

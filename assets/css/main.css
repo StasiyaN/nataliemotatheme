@@ -5,8 +5,8 @@ ul {
 ul li {
   text-transform: uppercase;
   list-style-type: none;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 22.5px;
+  margin-right: 22.5px;
 }
 ul li a {
   text-decoration: none;
@@ -35,6 +35,15 @@ ul li a {
 
 .primary-menu-wrapper .nav {
   display: flex;
+}
+
+#footer-menu {
+  width: 100%;
+  max-width: 1440px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

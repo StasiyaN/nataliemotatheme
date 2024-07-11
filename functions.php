@@ -14,9 +14,7 @@ add_action('wp_enqueue_scripts', 'nataliemota_enqueue_scripts');
 
 // MENUS
 add_action('after_setup_theme', function() {
- // Creation of arrays with parameters for add_theme_support
-  
-
+    
     // add_theme_support('admin-bar'); // conflict with C:\xampp\htdocs\NathalieMota\wp-includes\class-wp-admin-bar.php on line 63
     add_theme_support('custom-background');
     add_theme_support('custom-header');
