@@ -8,11 +8,16 @@
 <?php wp_head(); ?>
 </head>
 
+<nav>
+    <?php
+    wp_nav_menu( array(
+        'theme_location' => 'primary',
+        'menu_id'        => 'primary-menu',
+    ) );
+    ?>
+</nav>
+
+
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id = "wrapper">
-    <div id = "banner">
 
-    </div>
-</div>
-    
