@@ -25,14 +25,6 @@ body p {
   font-size: 14px;
 }
 
-.banner-img {
-  width: 1440px;
-  max-width: 1440px;
-  height: 962px;
-  margin: 0;
-  padding: 0;
-}
-
 #main ul,
 #footer ul {
   display: flex;
