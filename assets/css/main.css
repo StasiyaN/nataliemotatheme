@@ -10,25 +10,25 @@ body {
   padding: 0;
 }
 
-#primary-menu ul,
-#footer-menu ul {
+#main ul,
+#footer ul {
   display: flex;
   flex-direction: row;
 }
-#primary-menu ul li,
-#footer-menu ul li {
+#main ul li,
+#footer ul li {
   text-transform: uppercase;
   list-style-type: none;
   margin-left: 22.5px;
   margin-right: 22.5px;
 }
-#primary-menu ul li a,
-#footer-menu ul li a {
+#main ul li a,
+#footer ul li a {
   text-decoration: none;
   color: black;
 }
 
-#primary-menu {
+#main {
   width: 100%;
   max-width: 1440px;
   margin-right: 146px;

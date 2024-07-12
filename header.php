@@ -3,12 +3,14 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width">
-<?php wp_title('');?>
 
 <?php wp_head(); ?>
 </head>
 
-<nav id="primary-menu">
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+
+<nav id="main">
     <div class="primary-menu-wrapper">
         <div class="logo">
             <?php
@@ -27,6 +29,4 @@
 </nav>
 
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
 

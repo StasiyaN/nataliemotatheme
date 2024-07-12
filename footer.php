@@ -1,5 +1,5 @@
-<?php wp_footer(); ?>
-    <div id="footer-menu">
+
+    <div id="footer">
     <?php
         wp_nav_menu( array(
             'theme_location' => 'footer',
@@ -7,5 +7,6 @@
         ) );
         ?>
     </div>
+    <?php wp_footer(); ?>
 </body>
 </html>

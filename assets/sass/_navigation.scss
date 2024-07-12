@@ -1,6 +1,6 @@
 //general style for all ul li
-#primary-menu,
-#footer-menu {
+#main,
+#footer {
 ul {
     display: flex;
     flex-direction: row;
@@ -17,7 +17,7 @@ li {
 }
 }
 //main menu
-#primary-menu {
+#main {
     width: 100%;
     max-width: 1440px;
     margin-right: 146px;
