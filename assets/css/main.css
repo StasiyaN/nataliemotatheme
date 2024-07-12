@@ -1,18 +1,29 @@
-.page-template-home-page title {
-  display: none !important;
+body {
+  margin: 0 auto;
 }
 
-ul {
+.banner-img {
+  width: 1440px;
+  max-width: 1440px;
+  height: 962px;
+  margin: 0;
+  padding: 0;
+}
+
+#primary-menu ul,
+#footer-menu ul {
   display: flex;
   flex-direction: row;
 }
-ul li {
+#primary-menu ul li,
+#footer-menu ul li {
   text-transform: uppercase;
   list-style-type: none;
   margin-left: 22.5px;
   margin-right: 22.5px;
 }
-ul li a {
+#primary-menu ul li a,
+#footer-menu ul li a {
   text-decoration: none;
   color: black;
 }

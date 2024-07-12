@@ -1,4 +1,6 @@
 //general style for all ul li
+#primary-menu,
+#footer-menu {
 ul {
     display: flex;
     flex-direction: row;
@@ -11,6 +13,7 @@ li {
         text-decoration: none;
         color: black;
     }
+}
 }
 }
 //main menu
