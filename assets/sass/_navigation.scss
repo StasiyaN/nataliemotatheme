@@ -12,9 +12,9 @@ li {
     a {
         text-decoration: none;
         color: black;
-        font-family: "Space Mono", monospace;
-        font-weight: 400;
-        font-style: normal;
+        font-family: $ff-space-mono;
+        font-weight: $fw-regular;
+        font-size: 16px;
     }
 }
 }

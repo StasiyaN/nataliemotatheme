@@ -1,33 +1,28 @@
-//delaration de couleurs
-
-
-
-
+//desktop fonts etc
 body {
     margin: 0 auto;
 
     h1 {
-        font-family: $body-header-font;
-        font-style: $body-h1-h2-style;
-        font-weight: 700;
-        font-size: 96px;
+        font-family: $ff-space-mono;
+        font-style: italic;
+        font-weight: $fw-bold;
+        font-size: $h1-fs-dt;
     }
     h2 {
-        font-family: $body-header-font;
-        font-style: $body-h1-h2-style;
-        font-weight: 400;
-        font-size: 66px;
+        font-family: $ff-space-mono;
+        font-style: italic;
+        font-weight: $fw-regular;
+        font-size: $h2-fs-dt;
     }
     h3 {
-        font-family: $body-header-font;
-        font-weight: 400;
-        font-size: 18px;
+        font-family: $ff-space-mono;
+        font-weight: $fw-regular;
+        font-size: $h3-fs;
     }
     p {
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 14px;
+        font-family: $ff-poppins;
+        font-weight: $fw-light;
+        font-size: $p-fs;
     }
 }
 

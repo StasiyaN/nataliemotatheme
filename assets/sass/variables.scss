@@ -1,5 +1,26 @@
-$body-header-font: "Space Mono", monospace;
-$body-h1-h2-style: italic;
+// declaration des variables pour les fonts / elements du site
+//font families
+$ff-space-mono: "Space Mono", monospace;
+$ff-poppins: "Poppins", sans-serif;
+//font weights
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 700;
+
+//font sizes desktop & mobile
+$h1-fs-dt: 96px;
+$h1-fs-mob: 27.59px;
+$h2-fs-dt: 66px;
+$h2-fs-mob: 46px;
+$h3-fs: 18px;
+$p-fs: 14px;
+$photo-descr-fs: 14px;
+
+//breakpoints --> think to create mixins for resposive font
+//check note 12-07 variables&mixins
+
+
+
 
 //declaration des couleurs
 $primary-red: #E00000;
