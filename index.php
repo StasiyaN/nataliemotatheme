@@ -1,13 +1,9 @@
 <?php
 get_header();
 
-while (have_posts()) :
-    the_post();
-    the_title();
+if ( have_posts() ) : while ( have_posts() ) : the_post();
+get_template_part( 'home-page' ); //PAS SUR DU TOUT
 
-    echo "<br>";
-
-endwhile;
-
+endwhile; endif;
 
 get_footer();
