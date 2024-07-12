@@ -1,8 +1,13 @@
 <?php
 get_header();
-// if ( have_posts() ) : while ( have_posts() ) : the_post();
-// get_template_part( 'entry' );
-// comments_template();
-// endwhile; endif;
+
+while (have_posts()) :
+    the_post();
+    the_title();
+
+    echo "<br>";
+
+endwhile;
+
 
 get_footer();
