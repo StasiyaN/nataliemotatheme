@@ -3,10 +3,28 @@ body {
 }
 body h1 {
   font-family: "Space Mono", monospace;
-  font-weight: 700;
   font-style: italic;
+  font-weight: 700;
   font-size: 96px;
 }
+body h2 {
+  font-family: "Space Mono", monospace;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 66px;
+}
+body h3 {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 18px;
+}
+body p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+}
+
 .banner-img {
   width: 1440px;
   max-width: 1440px;
