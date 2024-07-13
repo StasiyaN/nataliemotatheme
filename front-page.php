@@ -1,6 +1,8 @@
 <?php
-get_header(); ?>
+get_header(); 
 
+get_template_part('/template-parts/contact-popup'); 
+?>
 
 
 <?php

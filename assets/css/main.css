@@ -78,4 +78,31 @@ body p {
   align-items: center;
 }
 
+.contact-popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 597px;
+  height: 769px;
+  border: 5px solid #000;
+  overflow: hidden;
+}
+
+.popup-header {
+  position: absolute;
+  top: 18px;
+}
+
+.popup-form {
+  margin-top: 170px;
+}
+
 /*# sourceMappingURL=main.css.map */
