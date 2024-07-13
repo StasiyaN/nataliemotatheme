@@ -101,8 +101,52 @@ body p {
   top: 18px;
 }
 
-.popup-form {
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 170px;
+}
+
+.popup-name input,
+.popup-email input,
+.popup-ref-photo input {
+  height: 40px;
+  width: 263px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #B8BBC2;
+}
+
+.popup-message textarea {
+  height: 210px;
+  width: 263px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #B8BBC2;
+}
+
+label {
+  display: block; /* Ensure each label is a block-level element */
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #000;
+}
+
+input[type=submit] {
+  display: flex;
+  height: 50px;
+  width: 263px;
+  color: #000;
+  border: none; /* Remove the border */
+  cursor: pointer;
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #D8D8D8;
 }
 
 /*# sourceMappingURL=main.css.map */

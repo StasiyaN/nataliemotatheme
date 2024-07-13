@@ -21,8 +21,51 @@
     top: 18px;
 }
 
-.popup-form {
-    margin-top: 170px;
+.form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 170px;
+    }
+
+.popup-name input,
+.popup-email input,
+.popup-ref-photo input {
+    height: 40px;
+    width: 263px;
+    box-sizing: border-box; 
+    border-radius: 8px;
+    border: 1px solid $color-secondary-grey;
 }
 
+.popup-message textarea {
+    height: 210px;
+    width: 263px;
+    box-sizing: border-box; 
+    border-radius: 8px;
+    border: 1px solid $color-secondary-grey;
+}
 
+label {
+    display: block; /* Ensure each label is a block-level element */
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: $ff-poppins;
+    font-weight: $fw-medium;
+    color: $color-black;
+}
+
+input[type="submit"] {
+    display: flex;
+    height: 50px;
+    width: 263px;
+    color: $color-black;
+    border: none; /* Remove the border */
+   // box-sizing: border-box;
+    cursor: pointer; 
+    font-family: $ff-space-mono;
+    font-size: 12px;
+    font-weight: $fw-regular;
+    background-color: $color-grey;
+}
