@@ -149,4 +149,8 @@ input[type=submit] {
   background-color: #D8D8D8;
 }
 
+.wpcf7-response-output {
+  display: none;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -69,3 +69,7 @@ input[type="submit"] {
     font-weight: $fw-regular;
     background-color: $color-grey;
 }
+
+ .wpcf7-response-output {
+    display: none;
+ }
