@@ -24,6 +24,10 @@ body p {
   font-size: 14px;
 }
 
+.entry-title {
+  display: none;
+}
+
 #main ul,
 #footer ul {
   display: flex;
@@ -107,6 +111,7 @@ body p {
   height: 769px;
   border: 5px solid #000;
   overflow: hidden;
+  z-index: 1000;
 }
 
 .popup-header {
@@ -173,7 +178,6 @@ input[type=submit] {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
