@@ -15,6 +15,7 @@
                 font-family: $ff-space-mono;
                 font-weight: $fw-regular;
                 font-size: 16px;
+                white-space: nowrap;
             }
         }
     }
@@ -44,7 +45,8 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly; 
-    gap: 634px; // adjust later
+   // gap: 634px; // adjust later
+    gap: 44.3vh; // adjust later
     max-width: 1440px;
     height: 80px;
     margin: 0 auto; //to verify

@@ -47,6 +47,7 @@ body p {
   font-family: "Space Mono", monospace;
   font-weight: 400;
   font-size: 16px;
+  white-space: nowrap;
 }
 
 .contact-btn p {
@@ -72,7 +73,7 @@ body p {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: 634px;
+  gap: 44.3vh;
   max-width: 1440px;
   height: 80px;
   margin: 0 auto;

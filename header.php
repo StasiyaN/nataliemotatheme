@@ -16,7 +16,12 @@
                 the_custom_logo();
             ?>
         </div>
-        <div class="nav">
+      
+
+           <div class="nav">
+           <div class="burger-menu">
+            <span></span>
+            </div>
             <?php
             wp_nav_menu( array(
                 'theme_location' => 'primary',
@@ -29,6 +34,7 @@
         </div>
     </div>
 </nav>
+
 <?php get_template_part('/template-parts/contact-popup');?>
                 
 
