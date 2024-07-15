@@ -7,8 +7,8 @@
         li {
             text-transform: uppercase;
             list-style-type: none;
-            margin-left: 22.5px;
-            margin-right: 22.5px;
+            margin-left: 1.56vw; //22.5px
+            margin-right: 1.56vw;
             a {
                 text-decoration: none;
                 color: black;
@@ -24,8 +24,8 @@
 .contact-btn p {
     text-transform: uppercase;
     list-style-type: none;
-    margin-left: 22.5px;
-    margin-right: 22.5px;
+    margin-left: 1.56vw; //22.5px
+    margin-right: 1.56vw;
     text-decoration: none;
     color: black;
     font-family: $ff-space-mono;
@@ -39,7 +39,8 @@
 #main {
     width: 100%;
     max-width: 1440px;
-    margin-right: 146px;
+   // margin-right: 146px;
+    margin-right: 10.14vw;
 }
 .primary-menu-wrapper {
     display: flex;
@@ -49,11 +50,12 @@
     gap: 44.3vh; // adjust later
     max-width: 1440px;
     height: 80px;
-    margin: 0 auto; //to verify
+   // margin: 0 auto; //to verify
 }
 
 .primary-menu-wrapper img {
-    margin-left: 148px;
+    //margin-left: 148px;
+    margin-left: 10.27vw;
 }
 .primary-menu-wrapper .nav {
     display: flex;
