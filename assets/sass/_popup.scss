@@ -1,4 +1,8 @@
 .contact-popup {
+    display: none;
+}
+
+.contact-popup.active{
     display: flex;
     align-items: center;
     justify-content: center;

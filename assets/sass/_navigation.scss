@@ -1,24 +1,39 @@
 //general style for all ul li
 #main,
 #footer {
-ul {
-    display: flex;
-    flex-direction: row;
-li {
+    ul {
+        display: flex;
+        flex-direction: row;
+        li {
+            text-transform: uppercase;
+            list-style-type: none;
+            margin-left: 22.5px;
+            margin-right: 22.5px;
+            a {
+                text-decoration: none;
+                color: black;
+                font-family: $ff-space-mono;
+                font-weight: $fw-regular;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.contact-btn p {
     text-transform: uppercase;
     list-style-type: none;
     margin-left: 22.5px;
     margin-right: 22.5px;
-    a {
-        text-decoration: none;
-        color: black;
-        font-family: $ff-space-mono;
-        font-weight: $fw-regular;
-        font-size: 16px;
-    }
+    text-decoration: none;
+    color: black;
+    font-family: $ff-space-mono;
+    font-weight: $fw-regular;
+    font-size: 16px;
+    cursor: pointer;
 }
-}
-}
+ 
+
 //main menu
 #main {
     width: 100%;

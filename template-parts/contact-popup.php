@@ -1,4 +1,4 @@
-<div class="contact-popup">
+<div id="popup-window" class="contact-popup">
     <div class="popup-wrapper">
             <img src="<?php echo get_template_directory_uri () . '/assets/img/contact-header.png';?>" alt="" class="popup-header">
         <!-- <div class="popup-form"> -->
