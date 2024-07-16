@@ -82,7 +82,7 @@ body p {
   margin-left: 10.27vw;
 }
 
-.primary-menu-wrapper .nav {
+.nav {
   display: flex;
 }
 
@@ -219,6 +219,7 @@ input[type=submit] {
     bottom: 0;
   }
   .nav {
+    display: none;
     position: fixed;
     flex-direction: column;
     justify-content: center;

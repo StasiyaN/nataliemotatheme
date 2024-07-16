@@ -33,7 +33,9 @@
     .burger-menu:after {
         bottom: 0;
     }
+
     .nav {
+        display: none;
         position: fixed;
         flex-direction: column;
         justify-content: center;
