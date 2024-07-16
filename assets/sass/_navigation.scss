@@ -40,7 +40,7 @@
     width: 100%;
     max-width: 1440px;
    // margin-right: 146px;
-  //  margin-right: 10.14vw;
+    margin-right: 10.14vw;
 }
 .primary-menu-wrapper {
     display: flex;
@@ -53,10 +53,11 @@
    // margin: 0 auto; //to verify
 }
 
-.primary-menu-wrapper img {
-    //margin-left: 148px;
+.logo {
     margin-left: 10.27vw;
+    
 }
+
 .primary-menu-wrapper .nav {
     display: flex;
 }
