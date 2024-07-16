@@ -1,0 +1,11 @@
+
+   //footer mobile
+   @media (max-width: $tablet) {
+   #footer ul {
+        flex-direction: column;
+        height: 208px;
+    }
+    li {
+        margin-bottom: 24px;
+    }
+}

@@ -95,6 +95,13 @@ body p {
   align-items: center;
 }
 
+.divider {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #000;
+}
+
 .contact-popup {
   display: none;
   align-items: center;
@@ -269,6 +276,15 @@ input[type=submit] {
   .contact-btn p {
     margin-top: -40px;
     margin-left: 45px;
+  }
+}
+@media (max-width: 768px) {
+  #footer ul {
+    flex-direction: column;
+    height: 208px;
+  }
+  li {
+    margin-bottom: 24px;
   }
 }
 
