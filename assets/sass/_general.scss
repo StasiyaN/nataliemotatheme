@@ -24,11 +24,18 @@ body {
         font-weight: $fw-light;
         font-size: $p-fs;
     }
+
+    .page-content {
+        display: flex;
+        height: 1761px;
+    }
 }
 
-.entry-title {
-    display: none;
-}
+    .entry-title {
+        display: none;
+    }
+
+
 
 
 

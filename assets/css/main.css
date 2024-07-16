@@ -23,6 +23,10 @@ body p {
   font-weight: 300;
   font-size: 14px;
 }
+body .page-content {
+  display: flex;
+  height: 1761px;
+}
 
 .entry-title {
   display: none;
@@ -111,11 +115,11 @@ body.lock {
   display: none;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .popup-wrapper {
   position: relative;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -123,7 +127,7 @@ body.lock {
   height: 769px;
   border: 5px solid #000;
   overflow: hidden;
-  z-index: 1000;
+  background-color: #fff;
 }
 
 .popup-header {
@@ -183,18 +187,12 @@ input[type=submit] {
   display: none;
 }
 
-.popup-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-}
-
 .active {
   display: flex;
+}
+
+body .page-content.hidden {
+  display: none;
 }
 
 .burger-menu.open span {
