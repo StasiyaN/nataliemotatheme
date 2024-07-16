@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Open the popup
         popupWindow.classList.add('active');
-        pageContent.classList.add('hidden');
+       // pageContent.classList.add('hidden');
     });
 
     // Prevent click inside the popup from closing it
