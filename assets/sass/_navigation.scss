@@ -77,7 +77,11 @@
     width: 100%;
     background-color: $color-black;
 }
-
+// forbid overflow while burger menu open
+body.lock {
+    overflow: hidden;
+    max-height: 100vh;
+}
 
 
 

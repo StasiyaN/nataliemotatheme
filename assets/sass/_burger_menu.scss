@@ -1,3 +1,18 @@
+// class open changement burger en x
+.burger-menu.open span {
+    transform: scale(0);
+}
+.burger-menu.open::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0,-50%);
+}
+
+.burger-menu.open::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0,50%);
+}
+
+
 @media (max-width: $tablet) {
     //BURGER MENU
     .burger-menu {
@@ -51,6 +66,10 @@
     }
     .contact-btn {
         align-self: center;
+    }
+
+    .nav.active {
+        display: flex !important;
     }
 
 

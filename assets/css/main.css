@@ -102,6 +102,11 @@ body p {
   background-color: #000;
 }
 
+body.lock {
+  overflow: hidden;
+  max-height: 100vh;
+}
+
 .contact-popup {
   display: none;
   align-items: center;
@@ -192,6 +197,20 @@ input[type=submit] {
   display: flex;
 }
 
+.burger-menu.open span {
+  transform: scale(0);
+}
+
+.burger-menu.open::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger-menu.open::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
 @media (max-width: 768px) {
   .burger-menu {
     display: block;
@@ -241,6 +260,9 @@ input[type=submit] {
   }
   .contact-btn {
     align-self: center;
+  }
+  .nav.active {
+    display: flex !important;
   }
   #main ul {
     flex-direction: column;
