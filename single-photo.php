@@ -7,7 +7,7 @@ if ( have_posts() ) :
         the_post(); 
         
         // Get the terms of the 'formats' taxonomy
-        $terms = get_the_terms( get_the_ID(), 'formats' );
+        $terms = get_the_terms( get_the_ID(), 'format' );
         $format_class = '';
   
         if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
@@ -25,7 +25,7 @@ if ( have_posts() ) :
             <h2><?php the_title(); ?></h2>
 
             <div class="photo-details">
-                <p class="ref">Reference : <?php echo esc_html( get_field('reference') ); ?></p>
+                <p class="ref">Référence : <?php echo esc_html( get_field('reference') ); ?></p>
                 <p>Format : 
                     <?php
                         // Get the terms associated with the 'formats' taxonomy
