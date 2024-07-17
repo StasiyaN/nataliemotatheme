@@ -27,7 +27,11 @@ body {
 
     .page-content {
         display: flex;
+        position: relative;
+        top: 0;
+        left: 0;
         height: 1761px;
+        z-index: 1;
     }
 }
 

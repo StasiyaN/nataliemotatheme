@@ -25,7 +25,11 @@ body p {
 }
 body .page-content {
   display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
   height: 1761px;
+  z-index: 1;
 }
 
 .entry-title {
@@ -88,6 +92,7 @@ body .page-content {
 
 .nav {
   display: flex;
+  z-index: 900;
 }
 
 #footer-menu {
@@ -112,10 +117,16 @@ body.lock {
 }
 
 .contact-popup {
-  display: none;
+  display: none; /* Initially hidden */
+  position: fixed; /* Change to fixed */
+  top: 0; /* Full height from the top */
+  left: 0; /* Full width from the left */
+  width: 100%; /* Full width of the viewport */
+  height: 100%; /* Full height of the viewport */
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.85); /* Dark overlay */
+  z-index: 1000; /* Ensure it overlays the page content */
 }
 
 .popup-wrapper {

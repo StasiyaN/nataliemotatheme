@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Declaration de variables
     let burgerBtn = document.querySelector('.burger-menu');
     let menuContent = document.querySelector('.nav');
-    let contactBtnMobile = document.getElementById('contactBtn');
+    let contactBtn = document.getElementById('contactBtn');
     let popupWindow = document.querySelector('.contact-popup');
     let popup = document.querySelector('.popup-wrapper');
     let pageContent = document.querySelector('.page-content');
@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    contactBtnMobile.addEventListener('click', function () {
+    contactBtn.addEventListener('click', function () {
         menuContent.classList.remove('active');
         burgerBtn.classList.remove('open');
         document.body.classList.remove('lock');
 
         // Open the popup
         popupWindow.classList.add('active');
-       // pageContent.classList.add('hidden');
+        //pageContent.classList.add('hidden');
     });
 
     // Prevent click inside the popup from closing it
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Close the popup when clicking outside of it
     document.addEventListener('click', function (event) {
-        if (popupWindow.classList.contains('active') && !popup.contains(event.target) && !contactBtnMobile.contains(event.target)) {
+        if (popupWindow.classList.contains('active') && !popup.contains(event.target) && !contactBtn.contains(event.target)) {
             popupWindow.classList.remove('active');
             pageContent.classList.remove('hidden');
         }
