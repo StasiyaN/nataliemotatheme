@@ -1,0 +1,27 @@
+.single-content {
+    width: 100%;
+    height: auto;
+    background-color: aquamarine;
+
+}
+
+.single-content {
+    h2 {
+        text-transform: uppercase;
+    }
+
+
+p {
+    font-family: $ff-space-mono;
+    text-transform: uppercase;
+    font-size: $photo-descr-fs;
+    font-weight: $fw-regular;
+
+}
+}
+
+//paysage 
+.photo-content.paysage .photo-image img {
+    width: 844px;
+    height: 563px;
+}

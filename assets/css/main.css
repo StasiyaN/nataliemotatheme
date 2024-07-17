@@ -102,13 +102,7 @@ body .page-content {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.divider {
-  display: block;
-  height: 1px;
-  width: 100%;
-  background-color: #000;
+  border-top: 1px solid #000;
 }
 
 body.lock {
@@ -134,8 +128,8 @@ body.lock {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 597px;
-  height: 769px;
+  width: 592px;
+  height: 764px;
   border: 5px solid #000;
   overflow: hidden;
   background-color: #fff;
@@ -317,6 +311,26 @@ body .page-content.hidden {
   li {
     margin-bottom: 24px;
   }
+}
+.single-content {
+  width: 100%;
+  height: auto;
+  background-color: aquamarine;
+}
+
+.single-content h2 {
+  text-transform: uppercase;
+}
+.single-content p {
+  font-family: "Space Mono", monospace;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.photo-content.paysage .photo-image img {
+  width: 844px;
+  height: 563px;
 }
 
 /*# sourceMappingURL=main.css.map */

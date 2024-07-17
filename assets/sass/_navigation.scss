@@ -70,14 +70,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: 1px solid $color-black;
 }
 
-.divider {
-    display: block;
-    height: 1px;
-    width: 100%;
-    background-color: $color-black;
-}
+// .divider {
+//     display: block;
+//     height: 1px;
+//     width: 100%;
+//     background-color: $color-black;
+// }
 // forbid overflow while burger menu open
 body.lock {
     overflow: hidden;
