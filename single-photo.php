@@ -1,68 +1,79 @@
 <?php get_header(); ?>
-<div class="single-content">
-
-<?php
-if ( have_posts() ) : 
-    while ( have_posts() ) : 
-        the_post(); 
+<div class="single-photo">
+    <div class="single-photo-content">
+        <?php
+        if ( have_posts() ) : 
+            while ( have_posts() ) : 
+                the_post(); 
+                
+                // Get the terms of the 'formats' taxonomy
+                $terms = get_the_terms( get_the_ID(), 'format' );
+                $format_class = '';
         
-        // Get the terms of the 'formats' taxonomy
-        $terms = get_the_terms( get_the_ID(), 'format' );
-        $format_class = '';
-  
-        if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
-            foreach ( $terms as $term ) {
-                if ( $term->slug == 'paysage' ) {
-                    $format_class = 'paysage';
-                } elseif ( $term->slug == 'portrait' ) {
-                    $format_class = 'portrait';
-                }
-            }
-        }
-        ?>
-
-        <div class="photo-card <?php echo esc_attr($format_class); ?>">
-            <h2><?php the_title(); ?></h2>
-
-            <div class="photo-details">
-                <p class="ref">Référence : <?php echo esc_html( get_field('reference') ); ?></p>
-                <p>Format : 
-                    <?php
-                        // Get the terms associated with the 'formats' taxonomy
-                        if ( $terms && ! is_wp_error( $terms ) ) {
-                            $format_names = array();
-                            foreach ( $terms as $term ) {
-                                $format_names[] = esc_html( $term->name );
-                            }
-                            echo implode(', ', $format_names);
-                        } else {
-                            echo 'No format';
+                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+                    foreach ( $terms as $term ) {
+                        if ( $term->slug == 'paysage' ) {
+                            $format_class = 'paysage';
+                        } elseif ( $term->slug == 'portrait' ) {
+                            $format_class = 'portrait';
                         }
-                    ?>
-                </p>
+                    }
+                }
+                ?>
+                <div class="info-photo-block">
+                    <div class="info-block">
+                        <div class="photo-details">
+                            <h2 id="photo-title"><?php the_title(); ?></h2>
+                            <p class="ref">Référence : <?php echo esc_html( get_field('reference') ); ?></p>
+                            <p>Format : 
+                                <?php
+                                    // Get the terms associated with the 'formats' taxonomy
+                                    if ( $terms && ! is_wp_error( $terms ) ) {
+                                        $format_names = array();
+                                        foreach ( $terms as $term ) {
+                                            $format_names[] = esc_html( $term->name );
+                                        }
+                                        echo implode(', ', $format_names);
+                                    } else {
+                                        echo 'No format';
+                                    }
+                                ?>
+                            </p>
+                            <p>Type : <?php echo esc_html( get_field('type') ); ?></p>
+                            <p>Année : <?php echo esc_html( get_field('annee') ); ?></p>
+                        </div>
+                    </div>
 
-                <p>Type : <?php echo esc_html( get_field('type') ); ?></p>
-                <p>Année : <?php echo esc_html( get_field('annee') ); ?></p>
-            </div>
+                        <div class="photo-block">
+                            <?php
+                                if ( has_post_thumbnail() ) {
+                                    $thumbnail_html = get_the_post_thumbnail();
+                                    $class_to_add = esc_attr($format_class);
 
-            <div class="photo-image">
-                <?php if ( has_post_thumbnail() ) {
-                    the_post_thumbnail();
-                } ?>
-            </div>
+                                    // Add the class to the img tag
+                                    if ( !empty($class_to_add) ) {
+                                        $thumbnail_html = str_replace('class="', 'class="' . $class_to_add . ' ', $thumbnail_html);
+                                    }
 
-            <div class="photo-contact">
-                <p class="photo-text">Cette photo vous intéresse ?</p>
-                <button id="contact-button" data-photo-ref="<?php echo esc_attr( get_field('reference') ); ?>">Contact</button>
-            </div>
+                                    echo $thumbnail_html;
+                                }
+                            ?>
+                        </div>
+                    </div>
 
-        </div>
+                    <div class="contact-block">
+                        <p class="photo-text">Cette photo vous intéresse ?</p>
+                        <button id="contact-button" data-photo-ref="<?php echo esc_attr( get_field('reference') ); ?>">Contact</button>
+                    </div>
+                </div>
 
-        <?php 
-    endwhile; 
-endif; 
-?>
-
+                <?php 
+            endwhile; 
+        else :
+            echo '<p>No posts found</p>';
+        endif; 
+        ?>
+    </div>
 </div>
 
 <?php get_footer(); ?>
