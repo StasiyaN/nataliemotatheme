@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Open the popup
         popupWindow.classList.add('active');
-        //pageContent.classList.add('hidden');
     });
 
     // Prevent click inside the popup from closing it
@@ -40,21 +39,20 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('click', function (event) {
         if (popupWindow.classList.contains('active') && !popup.contains(event.target) && !contactBtn.contains(event.target)) {
             popupWindow.classList.remove('active');
-            pageContent.classList.remove('hidden');
         }
     });
 
-    //single page title
-    let titleElement = document.getElementById('photo-title');
-    let titleText = titleElement.textContent.trim();
-    let titleWords = titleText.split(' ');
+    // //single page title
+    // let titleElement = document.getElementById('photo-title');
+    // let titleText = titleElement.textContent.trim();
+    // let titleWords = titleText.split(' ');
 
-    console.log(titleElement);
+    // console.log(titleElement);
 
-    if (titleWords.length >= 2) {
-        var firstWord = titleWords[0];
-        var secondPart = titleWords.slice(1).join(' ');
-        titleElement.innerHTML = firstWord + '<br>' + secondPart;
-    }
+    // if (titleWords.length >= 2) {
+    //     var firstWord = titleWords[0];
+    //     var secondPart = titleWords.slice(1).join(' ');
+    //     titleElement.innerHTML = firstWord + '<br>' + secondPart;
+    // }
 
 });

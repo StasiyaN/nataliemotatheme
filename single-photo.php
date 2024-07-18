@@ -64,8 +64,17 @@
                     <div class="contact-block">
                         <p class="photo-text">Cette photo vous intéresse ?</p>
                         <button id="contact-button" data-photo-ref="<?php echo esc_attr( get_field('reference') ); ?>">Contact</button>
+                            <div class="image-preview">
+                                
+                            </div>
+                                <div class="navigation-arrows">
+                                    <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow-left.png';?>" alt="" class="arrows arrow-left">
+                                    <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow-right.png';?>" alt="" class="arrows arrow-right">
+                                </div>
                     </div>
                 </div>
+
+                
 
                 <?php 
             endwhile; 
