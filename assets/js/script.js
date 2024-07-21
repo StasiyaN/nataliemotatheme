@@ -42,17 +42,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // //single page title
-    // let titleElement = document.getElementById('photo-title');
-    // let titleText = titleElement.textContent.trim();
-    // let titleWords = titleText.split(' ');
-
-    // console.log(titleElement);
-
-    // if (titleWords.length >= 2) {
-    //     var firstWord = titleWords[0];
-    //     var secondPart = titleWords.slice(1).join(' ');
-    //     titleElement.innerHTML = firstWord + '<br>' + secondPart;
-    // }
 
 });

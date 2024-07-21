@@ -13,12 +13,12 @@ function nataliemota_enqueue_scripts() {
 add_action('wp_enqueue_scripts', 'nataliemota_enqueue_scripts');
 
 // getting rid of other styles
-function remove_wp_block_library_css(){
-    wp_dequeue_style('wp-block-library');
-    wp_dequeue_style('wp-block-library-theme');
-    wp_dequeue_style('wc-block-style'); // If using WooCommerce and its blocks
-}
-add_action('wp_enqueue_scripts', 'remove_wp_block_library_css', 100);
+// function remove_wp_block_library_css(){
+//     wp_dequeue_style('wp-block-library');
+//     wp_dequeue_style('wp-block-library-theme');
+//     wp_dequeue_style('wc-block-style'); // If using WooCommerce and its blocks
+// }
+// add_action('wp_enqueue_scripts', 'remove_wp_block_library_css', 100);
 
 
 
@@ -137,3 +137,9 @@ function cptui_register_my_taxes_format() {
 }
 add_action( 'init', 'cptui_register_my_taxes_format' );
 
+// formats photos
+function custom_image_sizes () {
+    add_image_size('portrait', 563, 844, false);
+    add_image_size('paysage', 844, 563, false);
+}
+add_action( 'after_setup_theme', 'custom_image_sizes' );

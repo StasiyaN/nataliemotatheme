@@ -20,6 +20,7 @@
                     }
                 }
                 ?>
+
                 <div class="info-photo-block">
                     <div class="info-block">
                         <div class="photo-details">
@@ -45,18 +46,11 @@
                     </div>
 
                         <div class="photo-block">
-                            <?php
-                                if ( has_post_thumbnail() ) {
-                                    $thumbnail_html = get_the_post_thumbnail();
-                                    $class_to_add = esc_attr($format_class);
-
-                                    // Add the class to the img tag
-                                    if ( !empty($class_to_add) ) {
-                                        $thumbnail_html = str_replace('class="', 'class="' . $class_to_add . ' ', $thumbnail_html);
-                                    }
-
-                                    echo $thumbnail_html;
-                                }
+                        <?php
+                            // Display the custom image size for the post thumbnail
+                            if ( has_post_thumbnail() ) {
+                                the_post_thumbnail( 'portrait' ); 
+                            }
                             ?>
                         </div>
                     </div>
