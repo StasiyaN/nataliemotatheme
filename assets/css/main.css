@@ -123,12 +123,13 @@ body.lock {
 }
 
 .popup-wrapper {
+  display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 592px;
-  height: 764px;
+  height: 720px;
   border: 5px solid #000;
   overflow: hidden;
   background-color: #fff;
@@ -144,7 +145,7 @@ body.lock {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 170px;
+  margin-top: 140px;
 }
 
 .popup-name input,
@@ -337,6 +338,7 @@ body .page-content.hidden {
 .info-photo-block {
   display: flex;
   flex-direction: row;
+  gap: 100px;
 }
 
 .ref {
@@ -346,6 +348,9 @@ body .page-content.hidden {
 .info-block,
 .photo-block {
   height: 883px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .info-block {
@@ -362,9 +367,9 @@ body .page-content.hidden {
 }
 
 .photo-block img {
-  margin-top: 50px;
   max-width: 100%; /* Responsive image */
   height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
 }
 
 .contact-block {

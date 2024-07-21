@@ -30,6 +30,7 @@ p {
 .info-photo-block {
     display: flex;
     flex-direction: row;
+    gap: 100px;
 }
 .ref {
     margin-bottom: 61px;
@@ -37,6 +38,9 @@ p {
 .info-block, 
 .photo-block {
     height: 883px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 
   .info-block {
@@ -44,6 +48,7 @@ p {
   }
   .photo-block {
     width: 60%;
+ 
   }
 
 .photo-details{
@@ -54,9 +59,10 @@ p {
 
 
 .photo-block img {
-    margin-top: 50px;
+    //margin-top: 50px;
     max-width: 100%; /* Responsive image */
     height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
 }
 
 .contact-block {

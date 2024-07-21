@@ -13,12 +13,13 @@
 
 
 .popup-wrapper {
+    display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 592px;
-    height: 764px;
+    height: 720px;
     border: 5px solid $color-black;
     overflow: hidden;
     background-color: #fff;
@@ -34,7 +35,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 170px;
+        margin-top: 140px;
     }
 
 .popup-name input,

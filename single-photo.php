@@ -49,7 +49,7 @@
                         <?php
                             // Display the custom image size for the post thumbnail
                             if ( has_post_thumbnail() ) {
-                                the_post_thumbnail( 'portrait' ); 
+                                the_post_thumbnail( 'single-page-photo' ); 
                             }
                             ?>
                         </div>

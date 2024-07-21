@@ -139,7 +139,8 @@ add_action( 'init', 'cptui_register_my_taxes_format' );
 
 // formats photos
 function custom_image_sizes () {
-    add_image_size('portrait', 563, 844, false);
-    add_image_size('paysage', 844, 563, false);
+    add_image_size('single-page-photo', 563, 844, false);
+    add_image_size ('miniature', 81, 71, false);
+   // add_image_size('paysage', 844, 563, false);
 }
 add_action( 'after_setup_theme', 'custom_image_sizes' );
