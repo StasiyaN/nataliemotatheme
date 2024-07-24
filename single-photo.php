@@ -68,7 +68,10 @@
                     </div>
                 </div>
 
-                
+                <div class="other-photos">
+                    <h3>vous aimerez aussi</h3>
+              
+                </div>
 
                 <?php 
             endwhile; 

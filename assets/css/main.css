@@ -373,4 +373,10 @@ body .page-content.hidden {
   border-bottom: 1px solid #000;
 }
 
+.attachment-photo-thumbnail .size-photo-thumbnail .wp-post-image img {
+  width: 564px !important;
+  height: 495px !important;
+  object-fit: cover !important;
+}
+
 /*# sourceMappingURL=main.css.map */
