@@ -45,75 +45,33 @@
                         </div>
                     </div>
 
-                        <div class="photo-block">
+                    <div class="photo-block">
                         <?php
-                            // Display the custom image size for the post thumbnail
-                            if ( has_post_thumbnail() ) {
-                                the_post_thumbnail( 'single-page-photo' ); 
-                            }
-                            ?>
-                        </div>
+                        // Display the custom image size for the post thumbnail
+                        if ( has_post_thumbnail() ) {
+                            the_post_thumbnail( 'single-page-photo' ); 
+                        }
+                        ?>
                     </div>
+                </div>
 
-                    <div class="contact-block">
-                        <p class="photo-text">Cette photo vous intéresse ?</p>
-                        <button id="contact-button" data-photo-ref="<?php echo esc_attr( get_field('reference') ); ?>">Contact</button>
-                            <div class="image-preview">
-                                
-                            </div>
-                                <div class="navigation-arrows">
-                                    <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow-left.png';?>" alt="" class="arrows arrow-left">
-                                    <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow-right.png';?>" alt="" class="arrows arrow-right">
-                                </div>
+                <div class="contact-block">
+                    <p class="photo-text">Cette photo vous intéresse ?</p>
+                    <button id="contact-button" data-photo-ref="<?php echo esc_attr( get_field('reference') ); ?>">Contact</button>
+                    
+                    <div class="navigation-arrows">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow-left.png';?>" alt="" class="arrows arrow-left">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow-right.png';?>" alt="" class="arrows arrow-right">
                     </div>
                 </div>
 
                 <div class="other-photos">
-                    <h3>vous aimerez aussi</h3>
-                    <div class="other-photos-block">
-                    <?php
-        // Define WP Query parameters
-        $args = array(
-            'post_type' => 'photo',
-            'posts_per_page' => 2,
-        );
-        
-        // Execute WP Query
-        $single_photo_query = new WP_Query($args);
-
-        // Loop through posts
-        if ($single_photo_query->have_posts()) : 
-            while ($single_photo_query->have_posts()) : 
-                $single_photo_query->the_post(); 
-        ?>
-                
-                    <div class="photo-thumbnail">
-                    <a href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail('photo-thumbnail'); ?>
-                    </a>
-
-                    </div>
-               
-        <?php 
-            endwhile; 
-        else : 
-        ?>
-            <p><?php _e('No posts found.', 'text-domain'); ?></p>
-        <?php 
-        endif;
-
-        // Reset post data to the main query
-        wp_reset_postdata();
-        ?>
-        </div>
-    </div>
-              
+                    <h3>Vous aimerez aussi</h3>
+                    <!-- Add content for other photos if needed -->
                 </div>
 
-                <?php 
+            <?php 
             endwhile; 
-        else :
-            echo '<p>No posts found</p>';
         endif; 
         ?>
     </div>

@@ -3,8 +3,9 @@ get_header();
 ?>
 <div class="page-content">
     <div class="hero-header">
-        <h1>PHOTOGRAPHE EVENT</h1>
-    </div>
+
+        <h1>PHOTOGRAPHE EVENT</h1> 
+    </div> 
         <div class="page-body">
             <div class="filters">
             <label for="categorie"></label>

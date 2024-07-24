@@ -95,6 +95,13 @@ add_action('after_setup_theme', function() {
     add_theme_support('menus');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
+//     add_theme_support('custom-header', array(
+//         'width'         => 1440,
+//         'height'        => 962,
+//         'header-text'   => false, // Set to true if you want to display header text
+    
+//    ));
+    
 
     // enregistrement des menus de nav
     register_nav_menus( array(
