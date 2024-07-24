@@ -141,7 +141,7 @@ function filter_photos() {
 
     if ($format) {
         $args['tax_query'][] = array(
-            'taxonomy' => 'formats', // Adjust taxonomy name if needed
+            'taxonomy' => 'format', // Adjust taxonomy name if needed
             'field' => 'slug',
             'terms' => $format,
         );
