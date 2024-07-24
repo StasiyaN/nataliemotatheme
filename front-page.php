@@ -6,6 +6,7 @@ get_header();
         <h1>PHOTOGRAPHE EVENT</h1>
     </div>
     <div class="page-body">
+
         <?php
         // Define WP Query parameters
         $args = array(
@@ -23,7 +24,10 @@ get_header();
         ?>
                 
                     <div class="photo-thumbnail">
+                    <a href="<?php the_permalink(); ?>">
                         <?php the_post_thumbnail('photo-thumbnail'); ?>
+                    </a>
+
                     </div>
                
         <?php 

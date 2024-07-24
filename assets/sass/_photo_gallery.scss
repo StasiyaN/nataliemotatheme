@@ -1,5 +1,11 @@
-.attachment-photo-thumbnail .size-photo-thumbnail .wp-post-image img {
+.attachment-photo-thumbnail,
+.size-photo-thumbnail,
+.wp-post-image {
     width: 564px !important;
     height: 495px !important;
     object-fit: cover !important;
+}
+
+.other-photos-block {
+    display: flex;
 }
