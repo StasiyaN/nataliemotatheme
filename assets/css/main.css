@@ -29,7 +29,7 @@ body .page-content {
   position: relative;
   top: 0;
   left: 0;
-  height: 1761px;
+  height: auto;
   z-index: 1;
 }
 
