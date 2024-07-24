@@ -60,8 +60,22 @@
                     <button id="contact-button" data-photo-ref="<?php echo esc_attr( get_field('reference') ); ?>">Contact</button>
                     
                     <div class="navigation-arrows">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow-left.png';?>" alt="" class="arrows arrow-left">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow-right.png';?>" alt="" class="arrows arrow-right">
+                              <?php
+                                $prev_post = get_previous_post();
+                                if (!empty($prev_post)) : ?>
+                                    <a href="<?php echo get_permalink($prev_post->ID); ?>">
+                                        <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow-left.png';?>" alt="Previous post" class="arrows arrow-left">
+                                    </a>
+                                <?php endif; ?>
+
+                                <?php
+                                $next_post = get_next_post();
+                                if (!empty($next_post)) : ?>
+                                    <a href="<?php echo get_permalink($next_post->ID); ?>">
+                                        <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow-right.png';?>" alt="Next post" class="arrows arrow-right">
+                                    </a>
+                                <?php endif; ?>
+                             
                     </div>
                 </div>
 
