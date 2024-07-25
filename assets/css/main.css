@@ -390,4 +390,17 @@ body .page-content.hidden {
   object-fit: cover;
 }
 
+.custom-header {
+  background-size: cover;
+  background-position: center;
+  height: 962px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-header img {
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=main.css.map */

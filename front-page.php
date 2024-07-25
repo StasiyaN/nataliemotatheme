@@ -2,10 +2,13 @@
 get_header(); 
 ?>
 <div class="page-content">
-    <div class="hero-header">
+<?php if ( get_header_image() ) : ?>
+    <div class="custom-header" style="background-image: url('<?php echo esc_url( get_header_image() ); ?>');">
 
         <h1>PHOTOGRAPHE EVENT</h1> 
+
     </div> 
+    <?php endif; ?>
         <div class="page-body">
             <div class="filters">
             <label for="categorie"></label>
