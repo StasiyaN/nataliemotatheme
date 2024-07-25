@@ -43,12 +43,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //script pour trier les photos par année
-    document.getElementById('sort').addEventListener('change', function() {
-        var sortOrder = this.value;
-        var currentUrl = new URL(window.location.href);
-        currentUrl.searchParams.set('sort', sortOrder);
-        window.location.href = currentUrl.href;
+    document.addEventListener('DOMContentLoaded', function() {
+        let photoYear = document.getElementById('sort');
+        if (photoYear) {
+            photoYear.addEventListener('change', function() {
+                var sortOrder = this.value;
+                var currentUrl = new URL(window.location.href);
+                currentUrl.searchParams.set('sort', sortOrder);
+                window.location.href = currentUrl.href;
+            });
+        }
     });
+    
 
 
 });

@@ -42,5 +42,6 @@ document.addEventListener('DOMContentLoaded', function(){
         // Initial load
         loadPhotos(true);
     });
-    
+
+
 });

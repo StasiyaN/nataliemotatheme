@@ -180,18 +180,10 @@ function custom_sort_by_acf_date($query) {
     if (!is_admin() && $query->is_main_query() && isset($_GET['sort']) && !empty($_GET['sort'])) {
         $sort_order = sanitize_text_field($_GET['sort']);
 
-        $meta_query = array(
-            'relation' => 'OR',
-            array(
-                'key' => 'annee',
-                'compare' => 'EXISTS',
-            ),
-        );
-
-        $query->set('meta_query', $meta_query);
         $query->set('meta_key', 'annee');
-        $query->set('orderby', 'meta_value');
+        $query->set('orderby', 'meta_value_num'); // Use meta_value_num for numerical sorting
         $query->set('order', strtoupper($sort_order));
     }
 }
 add_action('pre_get_posts', 'custom_sort_by_acf_date');
+
