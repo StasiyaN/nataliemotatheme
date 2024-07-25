@@ -6,6 +6,8 @@ body h1 {
   font-style: italic;
   font-weight: 700;
   font-size: 96px;
+  color: transparent;
+  -webkit-text-stroke: 2px white;
 }
 body h2 {
   font-family: "Space Mono", monospace;
