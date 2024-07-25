@@ -50,8 +50,8 @@ get_header();
                                 <label for="sort"></label>
                                     <select id="sort" name="sort">
                                         <option value="desc">Trier par</option>
-                                        <option value="desc">Plus récentes</option>
-                                        <option value="asc">Plus anciennes</option>
+                                        <option value="desc">A partir des plus récentes</option>
+                                        <option value="asc">A partir des plus anciennes</option>
                                     </select>
             </div>
 
