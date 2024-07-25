@@ -78,9 +78,10 @@
                              
                     </div>
                 </div>
-
+                <h3>Vous aimerez aussi</h3>
                 <div class="other-photos">
-                    <h3>Vous aimerez aussi</h3>
+                   
+                    
                     <?php
                     // Fetch the terms of the custom taxonomy 'categorie'
                     $categorie_terms = get_the_terms( get_the_ID(), 'categorie' );

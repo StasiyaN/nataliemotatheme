@@ -379,8 +379,15 @@ body .page-content.hidden {
   object-fit: cover;
 }
 
-.other-photos-block {
+.other-photos {
   display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.related-photo img {
+  width: 564px !important;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=main.css.map */
