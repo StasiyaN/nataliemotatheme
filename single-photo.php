@@ -64,6 +64,10 @@
                                 $prev_post = get_previous_post();
                                 if (!empty($prev_post)) : ?>
                                     <a href="<?php echo get_permalink($prev_post->ID); ?>">
+                                        <div class="preview-img">
+                                        <img src="<?php echo esc_url(get_the_post_thumbnail_url($prev_post->ID, 'miniature')); ?>" alt="" class="preview">    
+                                        </div>
+                                   
                                         <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow-left.png';?>" alt="Previous post" class="arrows arrow-left">
                                     </a>
                                 <?php endif; ?>
@@ -72,6 +76,9 @@
                                 $next_post = get_next_post();
                                 if (!empty($next_post)) : ?>
                                     <a href="<?php echo get_permalink($next_post->ID); ?>">
+                                        <div class="preview-img">
+                                        <img src="<?php echo esc_url(get_the_post_thumbnail_url($next_post->ID, 'miniature')); ?>" alt="" class="preview"> 
+                                        </div>
                                         <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow-right.png';?>" alt="Next post" class="arrows arrow-right">
                                     </a>
                                 <?php endif; ?>

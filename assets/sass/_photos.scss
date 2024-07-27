@@ -25,3 +25,10 @@ align-items: center;
 .custom-header img {
     object-fit: cover;
 }
+
+.preview-img img {
+    visibility: hidden !important; 
+}
+.preview-img:hover img {
+    visibility: visible !important; 
+}

@@ -115,8 +115,8 @@ add_action('after_setup_theme', function() {
 
 // formats photos
 function custom_image_sizes () {
-    add_image_size('single-page-photo', 563, 844, false);
-    add_image_size ('miniature', 81, 71, false);
+    add_image_size('single-page-photo', 563, 844, true);
+    add_image_size ('miniature', 81, 71, true);
     add_image_size ('photo-thumbnail', 546, 495, true);
 }
 
