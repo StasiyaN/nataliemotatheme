@@ -4,11 +4,9 @@ get_header();
 <div class="page-content">
 <?php if ( get_header_image() ) : ?>
     <div class="custom-header" style="background-image: url('<?php echo esc_url( get_header_image() ); ?>');">
-
         <h1>PHOTOGRAPHE EVENT</h1> 
-
     </div> 
-    <?php endif; ?>
+<?php endif; ?>
         <div class="page-body">
             <div class="filters">
             <label for="categorie"></label>
@@ -46,19 +44,16 @@ get_header();
                     ?>
                 </select>
 
-                <?php
-                    $current_sort = isset($_GET['sort']) ? sanitize_text_field($_GET['sort']) : 'desc';
-                    ?>
+               
                     <label for="sort"></label>
                     <select id="sort" name="sort">
-                    <option value="">Trier par</option>
-
+                        <option value="">Trier par</option>
                         <option value="desc" <?php selected($current_sort, 'desc'); ?>>A partir des plus récentes</option>
                         <option value="asc" <?php selected($current_sort, 'asc'); ?>>A partir des plus anciennes</option>
                     </select>
 
                     <div class="photo-container">
-                                            <!-- Photos will be loaded here -->
+                    <!-- Photos will be loaded here -->
                     </div>
                     
                         <button id="load-more">Charger plus</button>

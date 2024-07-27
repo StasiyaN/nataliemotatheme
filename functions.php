@@ -95,15 +95,14 @@ add_action('after_setup_theme', function() {
     add_theme_support('menus');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
-    add_theme_support('custom-header', array(
-        'width'         => 1440,
-        'height'        => 962,
-        'header-text'   => true, // Set to true if you want to display header text
-        'flex-height'   => true,
-        'flex-width'    => true,
-        'uploads'       => true,
-    
-   ));
+//     add_theme_support('custom-header', array(
+//         'width'         => 1440,
+//         'height'        => 962,
+//         'header-text'   => true, // Set to true if you want to display header text
+//         'flex-height'   => true,
+//         'flex-width'    => true,
+//         'uploads'       => true,
+//    ));
     
 
     // enregistrement des menus de nav
@@ -118,12 +117,13 @@ add_action('after_setup_theme', function() {
 function custom_image_sizes () {
     add_image_size('single-page-photo', 563, 844, false);
     add_image_size ('miniature', 81, 71, false);
-    add_image_size ('photo-thumbnail', 546, 495, false);
+    add_image_size ('photo-thumbnail', 546, 495, true);
 }
 
 add_action( 'after_setup_theme', 'custom_image_sizes' );
 
 //AJAX
+//SECURISER AJAX WITH NONCE
 function filter_photos() {
     $category = $_POST['category'];
     $format = $_POST['format'];
@@ -158,7 +158,7 @@ function filter_photos() {
     }
 
     $query = new WP_Query($args);
-
+// CHANGER CE MORCEAUX FAIRE EN JS
     if ($query->have_posts()) :
         while ($query->have_posts()) : $query->the_post(); ?>
             <div class="photo-thumbnail">

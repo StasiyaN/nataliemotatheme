@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let popupWindow = document.querySelector('.contact-popup');
     let popup = document.querySelector('.popup-wrapper');
     let pageContent = document.querySelector('.page-content');
+   // let photoRef = document.querySelector('[data-photo-ref]');
+
 
     burgerBtn.addEventListener('click', function () {
         burgerBtn.classList.toggle('open');
@@ -54,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     });
-    
 
 
 });
