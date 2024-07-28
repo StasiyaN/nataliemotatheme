@@ -103,15 +103,16 @@
         transform: translateX(-50%);
     }
 
-    #main ul li a,
-    .contact-btn p {
+    #main ul li a {
         font-size: 44px;
         color: #fff;
     }
-    .contact-btn p {
+    
+    #contactBtn {
+        font-size: 44px;
+        color: #fff;
         margin-top: -40px;
         margin-left: 45px;
-    }
 
-    
+    }
     }

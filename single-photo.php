@@ -57,39 +57,36 @@
 
                 <div class="contact-block">
                     <p class="photo-text">Cette photo vous intéresse ?</p>
-                    <button id="single-page-button" data-photo-ref="<?php echo esc_attr( get_field('reference') ); ?>">Contact</button>
+                    <button id="single-page-button" class ="btn" data-photo-ref="<?php echo esc_attr( get_field('reference') ); ?>">Contact</button>
                     
                     <div class="navigation-arrows">
-                              <?php
-                                $prev_post = get_previous_post();
-                                if (!empty($prev_post)) : ?>
-                                    <a href="<?php echo get_permalink($prev_post->ID); ?>">
-                                        <div class="preview-img">
-                                        <img src="<?php echo esc_url(get_the_post_thumbnail_url($prev_post->ID, 'miniature')); ?>" alt="" class="preview">    
-                                        </div>
-                                   
-                                        <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow-left.png';?>" alt="Previous post" class="arrows arrow-left">
-                                    </a>
-                                <?php endif; ?>
-
+                        <div class="previous">
+                            <?php
+                            $prev_post = get_previous_post();
+                            if (!empty($prev_post)) : ?>
+                                <a href="<?php echo get_permalink($prev_post->ID); ?>" class = "prev-block">
+                                    <img src="<?php echo esc_url(get_the_post_thumbnail_url($prev_post->ID, 'miniature')); ?>" alt="" class="preview">    
+                                   <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow-left.png';?>" alt="Previous post" class="arrows arrow-left">
+                                </a>
+                            <?php endif; ?>
+                        </div>
+                            <div class="next">
                                 <?php
                                 $next_post = get_next_post();
                                 if (!empty($next_post)) : ?>
-                                    <a href="<?php echo get_permalink($next_post->ID); ?>">
-                                        <div class="preview-img">
+                                    <a href="<?php echo get_permalink($next_post->ID); ?>" class = "next-block">
                                         <img src="<?php echo esc_url(get_the_post_thumbnail_url($next_post->ID, 'miniature')); ?>" alt="" class="preview"> 
-                                        </div>
                                         <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow-right.png';?>" alt="Next post" class="arrows arrow-right">
                                     </a>
                                 <?php endif; ?>
-                             
+                            </div>
                     </div>
                 </div>
                     <div class="other-photos">
                         <h3>Vous aimerez aussi</h3>
-                            <div class="other-photos-images-block">
+                            
                             <?php get_template_part('template-parts/photo-block'); ?>
-                            </div>
+                        
                     </div>
 
             <?php 

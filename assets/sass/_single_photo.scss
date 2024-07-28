@@ -58,11 +58,16 @@ p {
 //     //width: 50%;
  
 //   }
+// enlevement de CAPS sur le text dans le contact box
+.photo-text {
+    text-transform: none !important;
+    font-family: $ff-poppins !important;
+    font-size: 14px !important;
+}
 
 .photo-details{
     margin-top: 555px;
     border-bottom: 1px solid $color-black;
-
 }
 
 
@@ -78,25 +83,43 @@ p {
     height: 118px; /* Fixed height */
     display: flex;
     align-items: center; /* Center items vertically */
-    padding: 0 20px; /* Optional padding */
+    //padding: 0 20px; /* Optional padding */
     border-bottom: 1px solid $color-black;
+    gap: 150px;
 }
 
 
-//format des images 
-// .photo-block .portrait {
-//     margin-top: 50px;
-//     width: 563px;
-//     height: 844px;
-// }
 
-// .photo-block .paysage {
-//     margin-top: 325px;
-//     width: 600px;
-//     height: 563px;
-// }
+.previous,
+.next {
+    position: relative;
+}
 
-// .photo-block .portrait,
-// .photo-block .paysage {
-//     object-fit: cover; /* Ensures the image covers the dimensions without distortion */
-// }
+//arrows
+.navigation-arrows {
+    margin-left: 430px;
+  }
+.arrows {
+    width: 25px;
+    position: absolute;
+    top: 30px;
+}
+//position des fleches
+.arrow-left {
+    left: -30px;
+}
+.arrow-right {
+    left: 30px;
+}
+
+
+.preview {
+    opacity: 0 !important; 
+    position: absolute;
+    top: -50px;
+    left: -27px;
+}
+.previous:hover .preview, 
+.next:hover .preview {
+    opacity: 1 !important; 
+}

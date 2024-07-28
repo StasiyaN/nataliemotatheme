@@ -26,9 +26,3 @@ align-items: center;
     object-fit: cover;
 }
 
-.preview-img img {
-    visibility: hidden !important; 
-}
-.preview-img:hover img {
-    visibility: visible !important; 
-}
