@@ -39,6 +39,10 @@ body .page-content {
   display: none;
 }
 
+.banner {
+  background-color: aquamarine;
+}
+
 #main ul,
 #footer ul {
   display: flex;

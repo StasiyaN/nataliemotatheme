@@ -85,8 +85,12 @@
                              
                     </div>
                 </div>
-                <h3>Vous aimerez aussi</h3>
-               
+                    <div class="other-photos">
+                        <h3>Vous aimerez aussi</h3>
+                            <div class="other-photos-images-block">
+                            <?php get_template_part('template-parts/photo-block'); ?>
+                            </div>
+                    </div>
 
             <?php 
             endwhile; 
