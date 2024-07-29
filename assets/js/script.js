@@ -1,30 +1,18 @@
-document.addEventListener('DOMContentLoaded', function () { 
-    console.log('script ok');
-
+document.addEventListener('DOMContentLoaded', function () {
+    
+    console.log('test script loaded');
     // Declaration de variables
     let burgerBtn = document.querySelector('.burger-menu');
     let menuContent = document.querySelector('.nav');
-    let contactBtn = document.getElementById('contactBtn');
+    let contactLink = document.getElementById('contactBtn');
+    let contactBtn = document.getElementById('single-page-contact');
     let popupWindow = document.querySelector('.contact-popup');
     let popup = document.querySelector('.popup-wrapper');
     let pageContent = document.querySelector('.page-content');
-    let singleContact = document.getElementById('single-page-contact');
     let overlay = document.querySelector('.popup-overlay');
-    let photoRef = document.getElementById('photoReference');
-
-    console.log(singleContact);
-
-    singleContact.addEventListener('click', function() {
-        photoRef.value = singleContact.getAttribute('data-photo-ref');
-        popupWindow.classList.add('active');
-    });
-
-    overlay.addEventListener('click', function() {
-        popupWindow.classList.remove('active');
-
-    });
 
 
+    
     burgerBtn.addEventListener('click', function () {
         burgerBtn.classList.toggle('open');
         menuContent.classList.toggle('active');
@@ -36,21 +24,34 @@ document.addEventListener('DOMContentLoaded', function () {
             pageContent.classList.remove('hidden');
         }
     });
-
-    contactBtn.addEventListener('click', function () {
+    
+    contactLink.addEventListener('click', function () {
         menuContent.classList.remove('active');
         burgerBtn.classList.remove('open');
         document.body.classList.remove('lock');
-
-        // Open the popup
         popupWindow.classList.add('active');
     });
 
 
+    overlay.addEventListener('click', function () {
+        console.log('clicked');
+        popupWindow.classList.remove('active');
+    });
 
-    //Prevent click inside the popup from closing it
-    popup.addEventListener('click', function (event) {
-        event.stopPropagation();
-    }); 
-
+    contactBtn.addEventListener('click', function () {
+        popupWindow.classList.add('active');
+    
+        // Ensure the button has the dataset attribute
+        if (contactBtn) {
+            const photoReference = contactBtn.dataset.photoRef;
+            const photoRefField = document.getElementById('photoReference');
+    
+            // Check if both the reference and the field are available
+            if (photoReference && photoRefField) {
+                photoRefField.value = photoReference;
+            }
+        }
+    });
+    
+    
 });
