@@ -8,9 +8,7 @@ function nataliemota_enqueue_scripts() {
 	wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.js');
 	//wp_enqueue_script('test-script', get_template_directory_uri() . '/assets/js/test.js');
     wp_enqueue_script('ajax-handler', get_template_directory_uri() . '/assets/js/ajax-handler.js', array('jquery'), null, true);
-    wp_localize_script('ajax-handler', 'ajax_params', array(
-        'ajax_url' => admin_url('admin-ajax.php'),
-    ));
+    wp_localize_script('ajax-handler', 'ajax_params', array('ajax_url' => admin_url('admin-ajax.php')));
 
     //wp_enqueue_script('script1', get_template_directory_uri() . '/assets/js/burger-menu.js');
     //wp_enqueue_script('script2', get_template_directory_uri() . '/assets/js/popup.js');
