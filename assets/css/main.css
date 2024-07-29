@@ -50,6 +50,7 @@ body .page-content {
   font-family: "Space Mono", monospace;
   font-size: 12px;
   border: none;
+  cursor: pointer;
 }
 
 #main ul,

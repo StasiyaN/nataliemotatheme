@@ -57,7 +57,7 @@
 
                 <div class="contact-block">
                     <p class="photo-text">Cette photo vous intéresse ?</p>
-                    <button id="single-page-button" class ="btn" data-photo-ref="<?php echo esc_attr( get_field('reference') ); ?>">Contact</button>
+                    <button id="single-page-contact" class ="btn" data-photo-ref="<?php echo esc_attr( get_field('reference') ); ?>">Contact</button>
                     
                     <div class="navigation-arrows">
                         <div class="previous">

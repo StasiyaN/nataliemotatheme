@@ -1,4 +1,4 @@
-<!-- <div class="popup-overlay"> -->
+ <div class="popup-overlay"> 
     <div class="contact-popup">
         <div class="popup-wrapper">
                 <img src="<?php echo get_template_directory_uri () . '/assets/img/contact-header.png';?>" alt="" class="popup-header">
@@ -7,4 +7,4 @@
             <!-- </div> -->
         </div>
     </div>
-<!-- </div> -->
+ </div> 

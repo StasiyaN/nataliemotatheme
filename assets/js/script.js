@@ -8,7 +8,21 @@ document.addEventListener('DOMContentLoaded', function () {
     let popupWindow = document.querySelector('.contact-popup');
     let popup = document.querySelector('.popup-wrapper');
     let pageContent = document.querySelector('.page-content');
-   // let photoRef = document.querySelector('[data-photo-ref]');
+    let singleContact = document.getElementById('single-page-contact');
+    let overlay = document.querySelector('.popup-overlay');
+    let photoRef = document.getElementById('photoReference');
+
+    console.log(singleContact);
+
+    singleContact.addEventListener('click', function() {
+        photoRef.value = singleContact.getAttribute('data-photo-ref');
+        popupWindow.classList.add('active');
+    });
+
+    overlay.addEventListener('click', function() {
+        popupWindow.classList.remove('active');
+
+    });
 
 
     burgerBtn.addEventListener('click', function () {
@@ -32,30 +46,11 @@ document.addEventListener('DOMContentLoaded', function () {
         popupWindow.classList.add('active');
     });
 
-    // Prevent click inside the popup from closing it
+
+
+    //Prevent click inside the popup from closing it
     popup.addEventListener('click', function (event) {
         event.stopPropagation();
-    });
-
-    // Close the popup when clicking outside of it
-    document.addEventListener('click', function (event) {
-        if (popupWindow.classList.contains('active') && !popup.contains(event.target) && !contactBtn.contains(event.target)) {
-            popupWindow.classList.remove('active');
-        }
-    });
-
-    //script pour trier les photos par année
-    document.addEventListener('DOMContentLoaded', function() {
-        let photoYear = document.getElementById('sort');
-        if (photoYear) {
-            photoYear.addEventListener('change', function() {
-                var sortOrder = this.value;
-                var currentUrl = new URL(window.location.href);
-                currentUrl.searchParams.set('sort', sortOrder);
-                window.location.href = currentUrl.href;
-            });
-        }
-    });
-
+    }); 
 
 });
