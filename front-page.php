@@ -29,7 +29,7 @@
     <div class="filter-forms">
         <section class="category">
             <form>
-                <label for="categorie">Catégories</label>
+                <label for="categorie"></label>
                 <select id="categorie" name="categorie">
                     <option value="">Catégories</option>
                 </select>
@@ -37,7 +37,7 @@
         </section>
         <section class="format">
             <form>
-                <label for="format">Formats</label>
+                <label for="format"></label>
                 <select id="format" name="format">
                     <option value="">Formats</option>
                 </select>
@@ -45,7 +45,7 @@
         </section>
         <section class="year">
             <form>
-                <label for="year">Trier par</label>
+                <label for="year"></label>
                 <select id="year" name="year">
                     <option value="">Trier par</option>
                 </select>
