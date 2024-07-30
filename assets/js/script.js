@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     overlay.addEventListener('click', function () {
-        console.log('clicked');
         popupWindow.classList.remove('active');
     });
 

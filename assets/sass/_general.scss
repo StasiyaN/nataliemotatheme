@@ -58,24 +58,29 @@ body {
 }
 
 
-//banniere
+/* banniere */
 .banner {
     position: relative;
+    width: 100%;
+    height: 962px; /* Adjust height as needed */
 }
+
 .banner img {
     width: 100%;
-    height: 962px;
+    height: 100%;
     object-fit: cover;
     position: absolute;
-    //z-index: 0;
- }
+}
 
- .banner h1 {
+.banner h1 {
     position: absolute;
     top: 402px;
     left: 220px;
-    //z-index: 3;
+}
 
- }
-
- 
+/* Ensure front-page-body appears below the banner */
+.front-page-body {
+    //margin-top: 962px; /* Same height as .banner */
+    position: relative;
+    z-index: 1;
+}
