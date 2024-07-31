@@ -1,5 +1,5 @@
 <?php 
-    $thumbnail_url = get_the_post_thumbnail_url();
+    $thumbnail_url = get_the_post_thumbnail_url('large');
 ?>
 
 <div class="photo-apparente">

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let burgerBtn = document.querySelector('.burger-menu');
     let menuContent = document.querySelector('.nav');
     let contactLink = document.getElementById('contactBtn');
-    let contactBtn = document.getElementById('single-page-contact');
+  //  let contactBtn = document.getElementById('single-page-contact');
     let popupWindow = document.querySelector('.contact-popup');
     let popup = document.querySelector('.popup-wrapper');
     let pageContent = document.querySelector('.page-content');
@@ -37,20 +37,20 @@ document.addEventListener('DOMContentLoaded', function () {
         popupWindow.classList.remove('active');
     });
 
-    contactBtn.addEventListener('click', function () {
-        popupWindow.classList.add('active');
+    // contactBtn.addEventListener('click', function () {
+    //     popupWindow.classList.add('active');
     
-        // Ensure the button has the dataset attribute
-        if (contactBtn) {
-            const photoReference = contactBtn.dataset.photoRef;
-            const photoRefField = document.getElementById('photoReference');
+    //     // Ensure the button has the dataset attribute
+    //     if (contactBtn) {
+    //         const photoReference = contactBtn.dataset.photoRef;
+    //         const photoRefField = document.getElementById('photoReference');
     
-            // Check if both the reference and the field are available
-            if (photoReference && photoRefField) {
-                photoRefField.value = photoReference;
-            }
-        }
-    });
+    //         // Check if both the reference and the field are available
+    //         if (photoReference && photoRefField) {
+    //             photoRefField.value = photoReference;
+    //         }
+    //     }
+    // });
     
     
 });

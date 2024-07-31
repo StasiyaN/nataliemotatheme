@@ -24,35 +24,37 @@
         <img src="<?php echo esc_url($image_url); ?>" alt="banniere du site" class="banner-img">
         <h1>PHOTOGRAPHE EVENT</h1> 
     </div> 
-    <div class="front-page-body">
-        <p>test</p>
-    <div class="filter-forms">
-        <section class="category">
-            <form>
-                <label for="categorie"></label>
-                <select id="categorie" name="categorie">
-                    <option value="">Catégories</option>
-                </select>
-            </form>
-        </section>
-        <section class="format">
-            <form>
-                <label for="format"></label>
-                <select id="format" name="format">
-                    <option value="">Formats</option>
-                </select>
-            </form>
-        </section>
-        <section class="year">
-            <form>
-                <label for="year"></label>
-                <select id="year" name="year">
-                    <option value="">Trier par</option>
-                </select>
-            </form>
-        </section>
-    </div>
-</div>
+        <div class="front-page-body">
+            <p>test</p>
+            <div class="filter-forms">
+                <section class="category">
+                    <form>
+                        <label for="categorie"></label>
+                        <select id="categorie" name="categorie">
+                            <option value="">Catégories</option>
+                        </select>
+                    </form>
+                </section>
+                    <section class="format">
+                        <form>
+                            <label for="format"></label>
+                            <select id="format" name="format">
+                                <option value="">Formats</option>
+                            </select>
+                        </form>
+                    </section>
+                        <section class="year">
+                            <form>
+                                <label for="year"></label>
+                                <select id="year" name="year">
+                                    <option value="">Trier par</option>
+                                    <option value="">A partir des plus récentes</option>
+                                    <option value="ASC">A partir des plus anciennes</option>
+                                </select>
+                            </form>
+                        </section>
+            </div>
+        </div>
 
 </div>
 
