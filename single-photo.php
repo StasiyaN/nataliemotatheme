@@ -82,17 +82,51 @@
                             </div>
                     </div>
                 </div>
-                    <div class="other-photos">
-                        <h3>Vous aimerez aussi</h3>
-                            
-                            <?php get_template_part('template-parts/photo-block'); ?>
-                        
-                    </div>
+                                <div class="other-photos">
+                                    <h3>Vous aimerez aussi</h3>
+                                        <div class="related-photos">
+                                    
+                                            <?php
+                                                // Fetch the terms of the custom taxonomy 'categorie'
+                                                $categorie_terms = get_the_terms(get_the_ID(), 'categorie');
+                                                if ($categorie_terms && !is_wp_error($categorie_terms)) {
+                                                    $categorie_ids = array();
+                                                    foreach ($categorie_terms as $term) {
+                                                        $categorie_ids[] = $term->term_id;
+                                                    }
 
-            <?php 
-            endwhile; 
-        endif; 
-        ?>
+                                                    // Query for related posts
+                                                    $related_args = array(
+                                                        'tax_query' => array(
+                                                            array(
+                                                                'taxonomy' => 'categorie',
+                                                                'field'    => 'term_id',
+                                                                'terms'    => $categorie_ids,
+                                                            ),
+                                                        ),
+                                                        'post__not_in' => array(get_the_ID()),
+                                                        'posts_per_page' => 2,
+                                                        'ignore_sticky_posts' => 1,
+                                                    );
+
+                                                    $related_query = new WP_Query($related_args);
+
+                                                    if ($related_query->have_posts()) {
+                                                        while ($related_query->have_posts()) {
+                                                            $related_query->the_post();
+                                                            
+                                                            get_template_part( 'template-parts/photo-block' );
+                                                            
+                                                        }
+                                                    } else {
+                                                        echo '<p>Pas des autres photos dans cette catégorie</p>';
+                                                    }
+                                                    wp_reset_postdata();   
+                                                }
+                                            ?>
+                                        </div>
+                                </div>
+            <?php endwhile; endif; ?>
     </div>
 </div>
 

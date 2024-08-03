@@ -1,5 +1,6 @@
 
-<div class="related-image">
+<div class="single-image">
+    <a href="<?php echo get_permalink(); ?>">
     <img src="<?php the_post_thumbnail_url('photo-thumbnail'); ?>" alt="<?php the_title(); ?>">
     <p><?php the_title(); ?></p>
 
