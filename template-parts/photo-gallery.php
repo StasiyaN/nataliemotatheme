@@ -3,7 +3,7 @@
         <section class="categorie">
             <label for="categorie"></label>
             <select id="categorie" name="categorie">
-                <option value="">Categorie</option>
+                <option value="">Catégorie</option>
                 <?php 
                 $categories = get_terms(array(
                     'taxonomy' => 'categorie',
@@ -17,9 +17,9 @@
         </section>
 
         <section class="format">
-            <label for="format">Format:</label>
+            <label for="format"></label>
             <select id="format" name="format">
-                <option value="">Select Format</option>
+                <option value="">Format</option>
                 <?php 
                 $formats = get_terms(array(
                     'taxonomy' => 'format',
@@ -32,12 +32,12 @@
             </select>
         </section>
 
-        <section class="year">
+        <section class="sort">
             <label for="year"></label>
             <select id="year" name="year">
-                <option value="">Sort By</option>
-                <option value="DESC">Newest First</option>
-                <option value="ASC">Oldest First</option>
+                <option value="">Trier par</option>
+                <option value="DESC">à partir des plus récentes</option>
+                <option value="ASC">à partir des plus anciennes</option>
             </select>
         </section>
     </form>
