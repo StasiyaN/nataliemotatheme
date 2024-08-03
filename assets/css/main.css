@@ -454,7 +454,7 @@ body .page-content.hidden {
 
 .other-photos {
   display: flex;
-  flex-direction: column;
+  flex-direction: column !important;
 }
 
 .photo-thumbnail img {
@@ -462,7 +462,7 @@ body .page-content.hidden {
   object-fit: cover;
 }
 
-.other-photos {
+.related-photos {
   display: flex;
   flex-direction: row;
   gap: 20px;
