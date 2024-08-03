@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
                                     <img src="${photo.thumbnail}" alt="${photo.title}">
                                 </a>
                                 <p>${photo.title}</p>
-                                <p>${currentCategorie}</p> 
+                                <p>${photo.categorie}</p> 
 
                             </div>
                         `;
@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
                         $('#load-more').hide(); // Hide button if no more photos
                     }
                 } else {
-                    $('#photo-container').html('<p>No photos found.</p>');
+                    $('#photo-container').html('<p> Aucune autre photo n\'est disponible dans cette catégorie</p>');
                     $('#load-more').hide(); // Hide button if no photos
                 }
             },

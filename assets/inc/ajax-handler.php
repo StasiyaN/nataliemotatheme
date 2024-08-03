@@ -51,10 +51,12 @@ function load_photos() {
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
+            $categories = wp_get_post_terms(get_the_ID(), 'categorie', array('fields' => 'names'));
             $response[] = array(
                 'title' => get_the_title(),
                 'permalink' => get_permalink(),
-                'thumbnail' => get_the_post_thumbnail_url(get_the_ID(), 'photo-thumbnail')
+                'thumbnail' => get_the_post_thumbnail_url(get_the_ID(), 'photo-thumbnail'),
+                'categorie' => implode(', ', $categories)
             );
         }
         wp_send_json_success($response);
