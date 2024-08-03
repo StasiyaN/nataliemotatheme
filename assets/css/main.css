@@ -66,6 +66,17 @@ body .page-content {
   text-align: center;
 }
 
+.fa-test {
+  background-color: aqua;
+  width: 100%;
+  height: 300px;
+}
+
+.fa-regular,
+.fa-eye {
+  color: white !important;
+}
+
 #main ul,
 #footer ul {
   display: flex;
