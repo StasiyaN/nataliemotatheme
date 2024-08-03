@@ -29,7 +29,9 @@ jQuery(document).ready(function($) {
                                 <a href="${photo.permalink}">
                                     <img src="${photo.thumbnail}" alt="${photo.title}">
                                 </a>
-                                <h2>${photo.title}</h2>
+                                <p>${photo.title}</p>
+                                <p>${currentCategorie}</p> 
+
                             </div>
                         `;
                     });
