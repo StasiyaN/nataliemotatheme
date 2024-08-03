@@ -4,11 +4,11 @@
     <img src="<?php the_post_thumbnail_url('photo-thumbnail'); ?>" alt="<?php the_title(); ?>">
     <p><?php the_title(); ?></p>
 
-    <div class="fa-test">
+
  
     <span class="fa-regular fa-eye"></span> 
   
-    </div>
+
 
     <span class="image-category">
             <?php

@@ -13,7 +13,9 @@
         width: 300px;
        // width: 250px;
     }
-
+    h3  {
+        text-transform: uppercase;
+    }
 
 p {
     font-family: $ff-space-mono;
@@ -122,4 +124,9 @@ p {
 .previous:hover .preview, 
 .next:hover .preview {
     opacity: 1 !important; 
+}
+
+.other-photos {
+    display: flex;
+    flex-direction: column;
 }
