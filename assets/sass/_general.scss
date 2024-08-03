@@ -10,6 +10,7 @@ body {
         font-size: $h1-fs-dt;
         color: transparent;
         -webkit-text-stroke: 2px white;
+        padding-top: 350px;
        
     }
     
@@ -59,24 +60,6 @@ body {
 
 
 /* banniere */
-.banner {
-    position: relative;
-    width: 100%;
-    height: 962px; /* Adjust height as needed */
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-}
-
-.banner h1 {
-    position: absolute;
-    top: 402px;
-    left: 220px;
-}
 
 /* Ensure front-page-body appears below the banner */
 .front-page-body {
@@ -84,3 +67,12 @@ body {
     position: relative;
     z-index: 1;
 }
+
+.hero {
+    position: relative;
+    background-size: cover !important;
+    height: 962px !important;
+    background-position: center !important;
+    text-align: center;
+    }
+

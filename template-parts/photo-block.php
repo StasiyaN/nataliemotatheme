@@ -1,8 +1,14 @@
-<?php 
-    $thumbnail_url = get_the_post_thumbnail_url('large');
-?>
 
-<div class="photo-apparente">
-<img src="<?php echo $thumbnail_url;?>" alt="<?php the_title_attribute(); ?>">
+<div class="related-image">
+    <img src="<?php the_post_thumbnail_url('photo-thumbnail'); ?>" alt="<?php the_title(); ?>">
+    <p><?php the_title(); ?></p>
 
+    <span class="image-category">
+            <?php
+                $terms = wp_get_post_terms( get_the_ID(), 'categorie' ); 
+                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+                    echo $terms[0]->name;
+                }
+            ?>
+        </span>
 </div>
