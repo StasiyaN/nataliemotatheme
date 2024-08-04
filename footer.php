@@ -7,6 +7,8 @@
                 ) );
                 ?>
             </div>
+
+            
             <!-- CREATION DU LIGHTBOX STUCTURE -->
                     <div id="lightbox-overlay" class="lightbox-overlay">
                         <div class="lightbox-content">
