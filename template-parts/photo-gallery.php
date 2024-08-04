@@ -45,8 +45,9 @@
 
 <!-- Photo Container -->
 <div id="photo-container">
-    <!-- Photos will be loaded here -->
 
+
+    <!-- Photos will be loaded here -->
 
 
 </div>

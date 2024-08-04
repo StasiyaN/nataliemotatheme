@@ -28,10 +28,13 @@ jQuery(document).ready(function($) {
                             <div class="photo-thumbnail">
                                 <a href="${photo.permalink}">
                                     <img src="${photo.thumbnail}" alt="${photo.title}">
+                                    <div class="hover-effect">
+                                        <span class="image-title">${photo.title}</span>
+                                        <span class="image-categorie">${photo.categorie}</span>
+                                        <span class="icon-eye"><i class="fa-solid fa-eye"></i></span>
+                                        <span class="show-full"><i class="fa-solid fa-expand"></i></span>
+                                    </div>
                                 </a>
-                                <p>${photo.title}</p>
-                                <p>${photo.categorie}</p> 
-
                             </div>
                         `;
                     });
@@ -52,7 +55,7 @@ jQuery(document).ready(function($) {
                         $('#load-more').hide(); // Hide button if no more photos
                     }
                 } else {
-                    $('#photo-container').html('<p> Aucune autre photo n\'est disponible dans cette catégorie</p>');
+                    $('#photo-container').html('<p>No more photos available.</p>');
                     $('#load-more').hide(); // Hide button if no photos
                 }
             },
@@ -102,6 +105,3 @@ jQuery(document).ready(function($) {
         loadPhotos(data, true);
     });
 });
-
-
-

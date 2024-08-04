@@ -27,6 +27,7 @@ function load_photos() {
         ),
     );
 
+    // Add category filter if provided
     if ($categorie) {
         $args['tax_query'][] = array(
             'taxonomy' => 'categorie',
@@ -35,6 +36,7 @@ function load_photos() {
         );
     }
 
+    // Add format filter if provided
     if ($format) {
         $args['tax_query'][] = array(
             'taxonomy' => 'format',
