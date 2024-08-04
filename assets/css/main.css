@@ -521,7 +521,7 @@ body .page-content.hidden {
   margin-right: 300px;
 }
 
-select {
+.dropdown-box {
   width: 260px !important;
   height: 42px !important;
   border-radius: 8px !important;
@@ -529,16 +529,9 @@ select {
   padding-left: 10px;
 }
 
-select option:first-child {
-  color: transparent;
-}
-
-select:hover option:first-child {
-  color: transparent;
-}
-
-select option:not(:first-child) {
+.dropdown-box option:not(:first-child) {
   text-transform: none !important;
+  font-family: "Poppins", sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */
