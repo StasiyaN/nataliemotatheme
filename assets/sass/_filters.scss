@@ -1,0 +1,36 @@
+.filter-wrapper {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+#filter-form {
+    display: flex;
+    justify-content: flex-start;
+    gap: 36px;
+}
+
+.format {
+    margin-right: 300px;
+}
+
+select {
+    width: 260px !important;
+    height: 42px !important;
+    border-radius: 8px !important;
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+select option:first-child{
+    color: transparent;
+    
+}
+
+select:hover option:first-child{
+    color: transparent;
+}
+
+select option:not(:first-child) {
+   text-transform: none !important;
+}
+
+

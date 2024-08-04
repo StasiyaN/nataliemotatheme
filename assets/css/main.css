@@ -1,4 +1,6 @@
 body {
+  height: 100%;
+  width: 100%;
   margin: 0 auto;
 }
 body h1 {
@@ -30,6 +32,7 @@ body .page-content {
   display: flex;
   flex-direction: column;
   position: relative;
+  flex: 1;
   top: 0;
   left: 0;
   height: auto;
@@ -68,6 +71,10 @@ body .page-content {
 
 .fa-regular {
   color: white !important;
+}
+
+#load-more {
+  align-self: center;
 }
 
 #main ul,
@@ -484,6 +491,54 @@ body .page-content.hidden {
 
 .custom-header img {
   object-fit: cover;
+}
+
+.gallery {
+  margin-left: 146px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1148px;
+}
+
+#photo-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.filter-wrapper {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+#filter-form {
+  display: flex;
+  justify-content: flex-start;
+  gap: 36px;
+}
+
+.format {
+  margin-right: 300px;
+}
+
+select {
+  width: 260px !important;
+  height: 42px !important;
+  border-radius: 8px !important;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+
+select option:first-child {
+  color: transparent;
+}
+
+select:hover option:first-child {
+  color: transparent;
+}
+
+select option:not(:first-child) {
+  text-transform: none !important;
 }
 
 /*# sourceMappingURL=main.css.map */

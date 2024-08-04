@@ -1,5 +1,7 @@
 //desktop fonts etc
 body {
+    height: 100%;
+    width: 100%;
     margin: 0 auto;
 
 
@@ -35,6 +37,7 @@ body {
         display: flex;
         flex-direction: column;
         position: relative;
+        flex: 1;
         top: 0;
         left: 0;
         height: auto;
@@ -80,4 +83,9 @@ body {
 
     .fa-regular {
         color: white !important;
+    }
+
+    #load-more {
+        align-self: center;
+       
     }

@@ -1,8 +1,8 @@
-<div class="filter-forms">
+<div class="filter-wrapper">
     <form id="filter-form">
         <section class="categorie">
             <label for="categorie"></label>
-            <select id="categorie" name="categorie">
+            <select id="categorie" name="categorie" class = "dropdown-box">
                 <option value="">Catégorie</option>
                 <?php 
                 $categories = get_terms(array(
@@ -18,7 +18,7 @@
 
         <section class="format">
             <label for="format"></label>
-            <select id="format" name="format">
+            <select id="format" name="format" class = "dropdown-box">
                 <option value="">Format</option>
                 <?php 
                 $formats = get_terms(array(
@@ -34,7 +34,7 @@
 
         <section class="sort">
             <label for="year"></label>
-            <select id="year" name="year">
+            <select id="year" name="year" class = "dropdown-box">
                 <option value="">Trier par</option>
                 <option value="DESC">à partir des plus récentes</option>
                 <option value="ASC">à partir des plus anciennes</option>
@@ -55,5 +55,5 @@
     <button id="load-more" 
 data-nonce="<?php echo wp_create_nonce('nm-nonce'); ?>"
 data-ajaxurl="<?php echo admin_url('admin-ajax.php'); ?>"
-class ="btn" > Load More</button>
+class ="btn" > Charger plus</button>
 
