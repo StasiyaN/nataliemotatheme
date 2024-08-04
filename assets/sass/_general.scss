@@ -81,7 +81,8 @@ body {
 
 
 
-    .fa-regular {
+    .fa-regular,
+    .fa-solid {
         color: white !important;
     }
 
@@ -89,3 +90,7 @@ body {
         align-self: center;
        
     }
+
+   .lightbox-overlay {
+    background-color:darkblue;
+   }

@@ -69,12 +69,17 @@ body .page-content {
   text-align: center;
 }
 
-.fa-regular {
+.fa-regular,
+.fa-solid {
   color: white !important;
 }
 
 #load-more {
   align-self: center;
+}
+
+.lightbox-overlay {
+  background-color: darkblue;
 }
 
 #main ul,
