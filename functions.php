@@ -9,6 +9,7 @@ function nataliemota_enqueue_scripts() {
     wp_enqueue_script ('font-awesome', 'https://kit.fontawesome.com/966a0dada8.js', array('jquery'), null, true);
     wp_enqueue_script ('main-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), null, true);
     wp_enqueue_script('ajax-js', get_template_directory_uri() . '/assets/js/ajax.js', array('jquery'), null, true);
+    wp_enqueue_script('lightbox-js', get_template_directory_uri() . '/assets/js/lightbox.js', array('jquery'), null, true);
 
     // Localize the script with new data
     wp_localize_script('ajax-js', 'myAjax', array(

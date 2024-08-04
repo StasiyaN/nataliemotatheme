@@ -8,7 +8,7 @@
                 ?>
             </div>
 
-            
+
             <!-- CREATION DU LIGHTBOX STUCTURE -->
                     <div id="lightbox-overlay" class="lightbox-overlay">
                         <div class="lightbox-content">
@@ -17,8 +17,10 @@
                                 <div class="lightbox-info">
                                     <div id="lightbox-ref" class="lightbox-ref"></div>
                                     <div id="lightbox-cat" class="lightbox-cat"></div>
-                                    <snap id="lightbox-prev" class="lightbox-nav"><i class="fa-solid fa-arrow-left-long"></i>Précédent</span>
-                                    <span id="lightbox-next" class="lightbox-nav">Suivant<i class="fa-solid fa-arrow-right-long"></i></span>
+                                    <div class="lightbox-nav">
+                                        <snap id="lightbox-prev" class="lightbox-nav"><i class="fa-solid fa-arrow-left-long"></i>Précédent</span>
+                                        <span id="lightbox-next" class="lightbox-nav">Suivant<i class="fa-solid fa-arrow-right-long"></i></span>
+                                    </div>
                                 </div>
                         </div>
                     </div>

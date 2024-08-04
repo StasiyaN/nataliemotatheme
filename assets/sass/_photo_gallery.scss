@@ -80,13 +80,12 @@
 }
 
 .hover-effect .show-full i {
-    margin-right: 5px; /* Space between the icon and text */
     font-size: 16px; /* Adjust icon size */
 }
 
 .image-title, .image-categorie {
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif; /* Adjust to your font-family */
+    font-family: $ff-poppins; 
     font-size: 14px;
     letter-spacing: 0.1em; /* Adjust letter spacing as needed */
 }

@@ -54,11 +54,14 @@ function load_photos() {
         while ($query->have_posts()) {
             $query->the_post();
             $categories = wp_get_post_terms(get_the_ID(), 'categorie', array('fields' => 'names'));
+            $photo_reference = get_post_meta(get_the_ID(), 'photo_reference', true); // Fetch custom field
             $response[] = array(
                 'title' => get_the_title(),
                 'permalink' => get_permalink(),
                 'thumbnail' => get_the_post_thumbnail_url(get_the_ID(), 'photo-thumbnail'),
-                'categorie' => implode(', ', $categories)
+                'categorie' => implode(', ', $categories), 
+                'reference ' => $photo_reference
+              
             );
         }
         wp_send_json_success($response);

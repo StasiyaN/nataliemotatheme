@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+    console.log('ajax script ok');
     // Global variables to store the current filter criteria and loading state
     var currentCategorie = '';
     var currentFormat = '';

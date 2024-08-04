@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
-    console.log('test script loaded');
+    console.log('main script loaded');
     // Declaration de variables
     let burgerBtn = document.querySelector('.burger-menu');
     let menuContent = document.querySelector('.nav');

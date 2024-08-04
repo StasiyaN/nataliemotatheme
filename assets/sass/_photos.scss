@@ -5,6 +5,7 @@
 .related-photos {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -96,7 +97,6 @@ align-items: center;
 }
 
 .hover-effect .show-full i {
-    margin-right: 5px; /* Space between the icon and text */
     font-size: 16px; /* Adjust icon size */
 }
 
