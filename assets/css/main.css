@@ -689,7 +689,7 @@ body .page-content.hidden {
 }
 
 /* Lightbox overlay styles */
-.lightbox-overlay {
+.lightbox {
   display: none; /* Hidden by default */
   position: fixed;
   top: 0;
