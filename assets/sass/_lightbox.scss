@@ -1,6 +1,6 @@
 /* Lightbox overlay styles */
 .lightbox {
-    display: none; /* Hidden by default */
+    //display: none; /* Hidden by default */
     position: fixed;
     top: 0;
     left: 0;
@@ -9,4 +9,69 @@
     background: rgba(0, 0, 0, 0.8); /* 80% transparent black */
     z-index: 1000; /* Make sure it’s on top */
     overflow: hidden;
+    color: white;
+}
+
+// changement de la couleur de fa
+.fa-solid,
+.fa-regular {
+    color: white !important;
+    font-size: 20px !important;
+}
+
+.lightbox-container {
+    margin-left: 250px;
+    margin-right: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+//position de l'image
+.lightbox-container img {
+    width: 100%;
+    height: auto;
+}
+
+//icons
+.lightbox-prev,
+.lightbox-next {
+    position: fixed;
+    top: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.lightbox-next {
+    right: 4%;
+
+}
+.lightbox-prev {
+    left: 4%;
+}
+
+.lightbox-reference,
+.lightbox-categorie {
+    position: fixed;
+    top: 93%;
+    color: white;
+    text-transform: uppercase;
+}
+
+.lightbox-reference {
+    left: 19%;
+}
+
+.lightbox-categorie {
+    right: 15%;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 5%;
+    right: 10%;
+
 }
