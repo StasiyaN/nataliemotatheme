@@ -26,14 +26,15 @@ jQuery(document).ready(function($) {
 
                     photos.forEach(photo => {
                         photoHtml += `
-                            <div class="photo-thumbnail">
-                                <a href="${photo.permalink}">
+                            <div class="photo-thumbnail" data-ref="${photo.reference}" data-cat="${photo.categorie}">
                                     <img src="${photo.thumbnail}" alt="${photo.title}">
                                     <div class="hover-effect">
                                         <span class="image-title">${photo.title}</span>
-                                        <span class="image-categorie">${photo.categorie}</span>
-                                        <span class="icon-eye"><i class="fa-solid fa-eye"></i></span>
-                                        <span class="show-full"><i class="fa-solid fa-expand"></i></span>
+                                            <span class="image-categorie">${photo.categorie}</span>
+                                                <a href="${photo.permalink}" class="icon-eye">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                                    <span class="show-full"><i class="fa-solid fa-expand"></i></span>
                                     </div>
                                 </a>
                             </div>
