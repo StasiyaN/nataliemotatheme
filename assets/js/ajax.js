@@ -64,6 +64,7 @@ jQuery(document).ready(function($) {
                 <p> ${photo.ref}</p>
                 <p>${photo.categorie.join(', ')}</p>
                 <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
+                <i class="fa-solid fa-expand"></i>
             </div>`;
         });
         return photosHtml;
@@ -79,6 +80,7 @@ jQuery(document).ready(function($) {
                     <p> ${photo.ref}</p>
                     <p>${photo.categorie.join(', ')}</p>
                     <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
+                    <i class="fa-solid fa-expand"></i>
                 </div>
                 `;
         });

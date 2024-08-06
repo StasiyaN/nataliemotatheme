@@ -38,7 +38,7 @@ body .page-content {
   left: 0;
   height: auto;
   z-index: 1;
-  height: 2332px;
+  height: fit-content;
 }
 
 .entry-title {
@@ -373,7 +373,7 @@ body .page-content.hidden {
 .single-photo-content {
   display: flex;
   flex-direction: column;
-  margin-left: 10.27vh;
+  margin-left: 145px;
 }
 
 .info-photo-block {
@@ -427,7 +427,7 @@ body .page-content.hidden {
 }
 
 .navigation-arrows {
-  margin-left: 430px;
+  margin-left: 400px;
 }
 
 .arrows {
@@ -466,18 +466,6 @@ body .page-content.hidden {
   object-fit: cover;
 }
 
-.related-photos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.related-photo img {
-  width: 564px !important;
-  object-fit: cover;
-}
-
 .custom-header {
   background-size: cover;
   background-position: center;
@@ -491,82 +479,30 @@ body .page-content.hidden {
   object-fit: cover;
 }
 
-.single-image {
-  position: relative;
-  overflow: hidden; /* Ensures content stays within the container */
-}
-
-.single-image img {
-  width: 100%;
-  display: block;
-  transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
-}
-
-.single-image .hover-effect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent hover-effect */
-  color: white;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+.photos {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
-  box-sizing: border-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.single-image:hover .hover-effect {
-  opacity: 1;
+.photos .photo-item img {
+  width: 546px;
+  height: 495px;
+  object-fit: cover;
 }
 
-.hover-effect .image-title {
-  position: absolute;
-  bottom: 10px; /* Position at the bottom with some margin */
-  left: 10px; /* Position at the left with some margin */
-  font-size: 16px; /* Adjust font size as needed */
-}
-
-.hover-effect .image-category {
-  position: absolute;
-  bottom: 10px; /* Position at the bottom with some margin */
-  right: 10px; /* Position at the right with some margin */
-  font-size: 14px; /* Adjust font size as needed */
-}
-
-.hover-effect .icon-eye {
-  position: absolute;
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust positioning to be centered */
-  font-size: 30px; /* Icon size */
-}
-
-.hover-effect .show-full {
-  position: absolute;
-  top: 10px; /* Position at the top with some margin */
-  right: 10px; /* Position at the right with some margin */
-  background: rgba(255, 255, 255, 0.8);
-  color: black;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 12px;
+.photo-single-unit {
   display: flex;
+  flex-direction: row;
+  gap: 40px;
   align-items: center;
 }
 
-.hover-effect .show-full i {
-  font-size: 16px; /* Adjust icon size */
-}
-
-.image-title, .image-category {
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  letter-spacing: 10%;
+.photo-single-unit .related-photo img {
+  width: 600px;
+  height: 495px;
+  object-fit: cover;
 }
 
 .gallery {
@@ -668,11 +604,14 @@ body .page-content.hidden {
 #filter-form {
   display: flex;
   justify-content: flex-start;
-  gap: 36px;
 }
 
-.format {
-  margin-right: 300px;
+#format {
+  margin-right: 320px;
+}
+
+#categorie {
+  margin-right: 36px;
 }
 
 .dropdown-box {
