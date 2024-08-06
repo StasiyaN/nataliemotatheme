@@ -573,8 +573,8 @@ body .page-content.hidden {
 .related-photo:hover .return-title,
 .photo-item:hover .return-cat,
 .related-photo:hover .return-cat,
-.photo-item:hover .show-more,
-.related-photo:hover .show-more {
+.photo-item:hover .show-full,
+.related-photo:hover .show-full {
   opacity: 1;
   transition: opacity 0.3s;
 }
@@ -606,7 +606,7 @@ body .page-content.hidden {
   z-index: 11;
 }
 
-.show-more {
+.show-full {
   opacity: 0;
   position: absolute;
   top: 10px; /* Position at the top with some margin */

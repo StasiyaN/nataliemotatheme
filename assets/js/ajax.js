@@ -65,7 +65,7 @@ jQuery(document).ready(function($) {
                             <p class="return-ref"> ${photo.ref}</p>
                             <p class="return-cat">${photo.categorie.join(', ')}</p>
                             <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
-                            <i class="fa-solid fa-expand show-more"></i>
+                            <i class="fa-solid fa-expand show-full"></i>
                         </div>
             </div>`;
         });
@@ -83,7 +83,7 @@ jQuery(document).ready(function($) {
                             <p class="return-ref"> ${photo.ref}</p>
                             <p class="return-cat">${photo.categorie.join(', ')}</p>
                             <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
-                            <i class="fa-solid fa-expand show-more"></i>
+                            <i class="fa-solid fa-expand show-full"></i>
                         </div>
                 </div>
                 `;
