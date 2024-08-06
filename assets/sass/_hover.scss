@@ -1,8 +1,81 @@
-.photo-item {
+.photo-item, 
+.related-photo {
     position: relative;
     overflow: hidden;
+    z-index: 10;
 }
 
-.photo-item:hover {
-    opacity: 0.5;
+.photo-item:hover::after, 
+.related-photo:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    transition: opacity 0.5s;
 }
+
+.photo-item:hover .view-photo, 
+.related-photo:hover .view-photo,
+.photo-item:hover .return-title, 
+.related-photo:hover .return-title,
+.photo-item:hover .return-cat, 
+.related-photo:hover .return-cat,
+.photo-item:hover .show-more, 
+.related-photo:hover .show-more {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+//positionnement des icones sur la photo
+.view-photo {
+    opacity: 0;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning to be centered */
+    font-size: 30px;
+    z-index: 11;
+    color: white !important;
+}
+
+.return-title {
+    opacity: 0;
+    position: absolute;
+    bottom: 5px; /* Position at the bottom with some margin */
+    left: 10px; /* Position at the left with some margin */
+    z-index: 11;
+    
+}
+
+.return-cat {
+    opacity: 0;
+    position: absolute;
+    bottom: 5px; /* Position at the bottom with some margin */
+    right: 10px; /* Position at the right with some margin */
+    z-index: 11;
+
+}
+
+.show-more {
+    opacity: 0;
+    position: absolute;
+    top: 10px; /* Position at the top with some margin */
+    right: 10px; /* Position at the right with some margin */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 15px;
+    z-index: 11;
+ }
+
+ .return-cat,
+ .return-title {
+    color: white;
+    text-transform: uppercase;
+    font-family: $ff-poppins !important;
+    font-size: 14px;
+    letter-spacing: 10%;
+ }
