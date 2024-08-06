@@ -60,8 +60,8 @@ jQuery(document).ready(function($) {
         photos.forEach(photo => {
             photosHtml += `<div class="photo-item">
                 <img src="${photo.src}" alt="${photo.title}">
-                <h3>${photo.title}</h3>
-                <p>Référence: ${photo.ref}</p>
+                <p>${photo.title}</p>
+                <p> ${photo.ref}</p>
                 <p>${photo.categorie.join(', ')}</p>
                 <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
             </div>`;
@@ -74,10 +74,11 @@ jQuery(document).ready(function($) {
         relatedPhotos.forEach(photo => {
             relatedPhotosHtml += `
                 <div class="related-photo">
-                <a href="${photo.url}">
-                    <img src="${photo.src}" alt="${photo.title}">
-                    <i class="fa fa-eye"></i>
-                </a>
+                       <img src="${photo.src}" alt="${photo.title}">
+                    <p>${photo.title}</p>
+                    <p> ${photo.ref}</p>
+                    <p>${photo.categorie.join(', ')}</p>
+                    <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
                 </div>
                 `;
         });

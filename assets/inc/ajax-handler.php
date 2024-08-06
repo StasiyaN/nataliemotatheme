@@ -100,6 +100,8 @@ function load_related_photos_ajax_handler() {
                     $related_photos[] = array(
                         'src' => get_the_post_thumbnail_url(get_the_ID(), 'full'),
                         'title' => get_the_title(),
+                        'ref' => get_post_meta(get_the_ID(), 'reference', true),
+                        'categorie' => wp_get_post_terms(get_the_ID(), 'categorie', array('fields' => 'names')),
                         'url' => get_permalink()
                     );
                 }
