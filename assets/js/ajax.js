@@ -60,11 +60,13 @@ jQuery(document).ready(function($) {
         photos.forEach(photo => {
             photosHtml += `<div class="photo-item">
                 <img src="${photo.src}" alt="${photo.title}">
-                <p>${photo.title}</p>
-                <p> ${photo.ref}</p>
-                <p>${photo.categorie.join(', ')}</p>
-                <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
-                <i class="fa-solid fa-expand"></i>
+                     <div class="return-info">
+                            <p class="return-title">${photo.title}</p>
+                            <p class="return-ref"> ${photo.ref}</p>
+                            <p class="return-cat">${photo.categorie.join(', ')}</p>
+                            <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
+                            <i class="fa-solid fa-expand show-more"></i>
+                        </div>
             </div>`;
         });
         return photosHtml;
@@ -75,12 +77,14 @@ jQuery(document).ready(function($) {
         relatedPhotos.forEach(photo => {
             relatedPhotosHtml += `
                 <div class="related-photo">
-                       <img src="${photo.src}" alt="${photo.title}">
-                    <p>${photo.title}</p>
-                    <p> ${photo.ref}</p>
-                    <p>${photo.categorie.join(', ')}</p>
-                    <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
-                    <i class="fa-solid fa-expand"></i>
+                    <img src="${photo.src}" alt="${photo.title}">
+                       <div class="return-info">
+                            <p class="return-title">${photo.title}</p>
+                            <p class="return-ref"> ${photo.ref}</p>
+                            <p class="return-cat">${photo.categorie.join(', ')}</p>
+                            <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
+                            <i class="fa-solid fa-expand show-more"></i>
+                        </div>
                 </div>
                 `;
         });

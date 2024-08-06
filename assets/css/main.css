@@ -518,84 +518,6 @@ body .page-content.hidden {
   gap: 20px;
 }
 
-.photo-thumbnail {
-  position: relative;
-  overflow: hidden; /* Ensures content stays within the container */
-}
-
-.photo-thumbnail img {
-  width: 100%;
-  display: block;
-  transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
-}
-
-.hover-effect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent hover-effect */
-  color: white;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.photo-thumbnail:hover .hover-effect {
-  opacity: 1;
-}
-
-.hover-effect .image-title {
-  position: absolute;
-  bottom: 10px; /* Position at the bottom with some margin */
-  left: 10px; /* Position at the left with some margin */
-  font-size: 16px; /* Adjust font size as needed */
-}
-
-.hover-effect .image-categorie {
-  position: absolute;
-  bottom: 10px; /* Position at the bottom with some margin */
-  right: 10px; /* Position at the right with some margin */
-  font-size: 14px; /* Adjust font size as needed */
-}
-
-.hover-effect .icon-eye {
-  position: absolute;
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust positioning to be centered */
-  font-size: 30px; /* Icon size */
-}
-
-.hover-effect .show-full {
-  position: absolute;
-  top: 10px; /* Position at the top with some margin */
-  right: 10px; /* Position at the right with some margin */
-  background: rgba(255, 255, 255, 0.8);
-  color: black;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-}
-
-.hover-effect .show-full i {
-  font-size: 16px; /* Adjust icon size */
-}
-
-.image-title, .image-categorie {
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.1em; /* Adjust letter spacing as needed */
-}
-
 .filter-wrapper {
   margin-top: 80px;
   margin-bottom: 40px;
@@ -625,6 +547,15 @@ body .page-content.hidden {
 .dropdown-box option:not(:first-child) {
   text-transform: none !important;
   font-family: "Poppins", sans-serif;
+}
+
+.photo-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-item:hover {
+  opacity: 0.5;
 }
 
 /* Lightbox overlay styles */
