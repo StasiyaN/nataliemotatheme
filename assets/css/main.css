@@ -690,6 +690,7 @@ body .page-content.hidden {
 
 /* Lightbox overlay styles */
 .lightbox {
+  display: none; /* Hidden by default */
   position: fixed;
   top: 0;
   left: 0;
