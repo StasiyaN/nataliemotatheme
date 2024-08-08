@@ -12,7 +12,7 @@ function filter_photos_ajax_handler() {
     // Set up the query arguments
     $args = array(
         'post_type' => 'photo',
-        'posts_per_page' => 8,
+        'posts_per_page' => 8, // Number of photos per page
         'offset' => $offset,
     );
 
@@ -80,6 +80,7 @@ function load_related_photos_ajax_handler() {
 
             // Query for related posts
             $related_args = array(
+                'post_type' => 'photo',
                 'tax_query' => array(
                     array(
                         'taxonomy' => 'categorie',
@@ -159,3 +160,5 @@ function fetch_all_photos_ajax_handler() {
 
 add_action('wp_ajax_fetch_all_photos', 'fetch_all_photos_ajax_handler');
 add_action('wp_ajax_nopriv_fetch_all_photos', 'fetch_all_photos_ajax_handler');
+
+?>
