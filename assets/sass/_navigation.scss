@@ -46,18 +46,17 @@
 .primary-menu-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-evenly; 
-   // gap: 634px; // adjust later
-    gap: 30vh;//44.3vh; // adjust later
+    justify-content: center; 
     max-width: 1440px;
     height: 80px;
    // margin: 0 auto; //to verify
 }
 
-// .logo {
-//    // margin-left: 10.27vw;
+.logo {
+   margin-left: 10.27vw;
+   margin-right: 30vw;
     
-// }
+}
 
 .nav {
     display: flex;

@@ -12,6 +12,7 @@ body h1 {
   color: transparent;
   -webkit-text-stroke: 2px white;
   padding-top: 350px;
+  margin-top: 0;
 }
 body h2 {
   font-family: "Space Mono", monospace;
@@ -30,6 +31,7 @@ body p {
   font-size: 14px;
 }
 body .page-content {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -56,6 +58,10 @@ body .page-content {
 }
 
 /* banniere */
+.banner {
+  margin-top: 0;
+}
+
 /* Ensure front-page-body appears below the banner */
 .front-page-body {
   position: relative;
@@ -72,6 +78,7 @@ body .page-content {
 
 #load-more {
   align-self: center;
+  margin-top: 20px;
 }
 
 #main ul,
@@ -117,10 +124,14 @@ body .page-content {
 .primary-menu-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 30vh;
+  justify-content: center;
   max-width: 1440px;
   height: 80px;
+}
+
+.logo {
+  margin-left: 10.27vw;
+  margin-right: 30vw;
 }
 
 .nav {
@@ -626,6 +637,10 @@ body .page-content.hidden {
   letter-spacing: 10%;
 }
 
+.show-full {
+  cursor: pointer;
+}
+
 /* Lightbox overlay styles */
 .lightbox {
   display: none; /* Hidden by default */
@@ -652,12 +667,14 @@ body .page-content.hidden {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .lightbox-container img {
-  width: 100%;
-  height: auto;
+  width: 100vh;
+  height: 90vh;
+  object-fit: cover;
 }
 
 .lightbox-prev,
@@ -681,9 +698,10 @@ body .page-content.hidden {
 .lightbox-reference,
 .lightbox-categorie {
   position: fixed;
-  top: 93%;
+  top: 95%;
   color: white;
   text-transform: uppercase;
+  font-family: "Space Mono", monospace;
 }
 
 .lightbox-reference {
@@ -698,6 +716,12 @@ body .page-content.hidden {
   position: fixed;
   top: 5%;
   right: 10%;
+}
+
+.lightbox-prev,
+.lightbox-next,
+.lightbox-close {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

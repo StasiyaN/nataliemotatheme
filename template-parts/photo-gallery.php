@@ -1,3 +1,4 @@
+
 <?php
 // récupere les infos : image mise en avant(thumbnail_url), url du post, titre, categorie, réf
 $thumbnail_url = get_the_post_thumbnail_url();

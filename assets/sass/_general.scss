@@ -13,6 +13,7 @@ body {
         color: transparent;
         -webkit-text-stroke: 2px white;
         padding-top: 350px;
+        margin-top: 0;
        
     }
     
@@ -34,6 +35,7 @@ body {
     }
 
     .page-content {
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -63,6 +65,9 @@ body {
 
 
 /* banniere */
+.banner {
+    margin-top: 0;
+}
 
 /* Ensure front-page-body appears below the banner */
 .front-page-body {
@@ -82,5 +87,6 @@ body {
 
     #load-more {
         align-self: center;
+        margin-top: 20px;
        
     }

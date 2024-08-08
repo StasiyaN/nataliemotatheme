@@ -25,13 +25,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+   // min-height: 100vh;
+   margin-top: 30px;
+   margin-bottom: 30px;
 }
 
 //position de l'image
 .lightbox-container img {
-    width: 100%;
-    height: auto;
+    width: 100vh;
+    height: 90vh;
+    object-fit: cover;
 }
 
 //icons
@@ -56,9 +59,10 @@
 .lightbox-reference,
 .lightbox-categorie {
     position: fixed;
-    top: 93%;
+    top: 95%;
     color: white;
     text-transform: uppercase;
+    font-family: $ff-space-mono;
 }
 
 .lightbox-reference {
@@ -75,3 +79,10 @@
     right: 10%;
 
 }
+
+.lightbox-prev,
+.lightbox-next,
+.lightbox-close {
+    cursor: pointer;
+}
+
