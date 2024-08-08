@@ -499,7 +499,7 @@ body .page-content.hidden {
   align-items: center;
 }
 
-.photo-single-unit .related-photo img {
+.photo-single-unit .photo-item img {
   width: 600px;
   height: 495px;
   object-fit: cover;
