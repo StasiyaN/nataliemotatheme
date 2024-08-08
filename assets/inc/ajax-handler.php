@@ -123,3 +123,39 @@ function load_related_photos_ajax_handler() {
 
 add_action('wp_ajax_load_related_photos', 'load_related_photos_ajax_handler');
 add_action('wp_ajax_nopriv_load_related_photos', 'load_related_photos_ajax_handler');
+
+// Fetch all photos handler
+function fetch_all_photos_ajax_handler() {
+    // Check nonce
+    check_ajax_referer('nm-nonce', 'security');
+
+    // Query arguments to fetch all photos
+    $args_allphotos = array(
+        'post_type' => 'photo',
+        'posts_per_page' => -1, // Fetch all posts
+    );
+
+    $query_allphotos = new WP_Query($args_allphotos);
+    $all_photos = array();
+
+    if ($query_allphotos->have_posts()) {
+        while ($query_allphotos->have_posts()) {
+            $query_allphotos->the_post();
+            $all_photos[] = array(
+                'src' => get_the_post_thumbnail_url(get_the_ID(), 'full'),
+                'title' => get_the_title(),
+                'ref' => get_post_meta(get_the_ID(), 'reference', true),
+                'categorie' => wp_get_post_terms(get_the_ID(), 'categorie', array('fields' => 'names')),
+                'url' => get_permalink()
+            );
+        }
+        wp_send_json_success(array('all_photos' => $all_photos));
+    } else {
+        wp_send_json_error(array('message' => 'couldn\'t load all photos'));
+    }
+
+    wp_die();
+}
+
+add_action('wp_ajax_fetch_all_photos', 'fetch_all_photos_ajax_handler');
+add_action('wp_ajax_nopriv_fetch_all_photos', 'fetch_all_photos_ajax_handler');

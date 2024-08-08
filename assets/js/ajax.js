@@ -1,6 +1,5 @@
 jQuery(document).ready(function($) {
     let offset = 0;
-    let allPhotos = []; // Array to store all response data
 
     function loadPhotos() {
         const categorie = $('#categorie').val();
@@ -10,7 +9,7 @@ jQuery(document).ready(function($) {
         $.ajax({
             url: myAjax.ajax_url,
             type: 'POST',
-            dataType: 'json', // Specify that we expect JSON data
+            dataType: 'json',
             data: {
                 action: 'filter_photos',
                 security: myAjax.nonce,
@@ -21,13 +20,15 @@ jQuery(document).ready(function($) {
             },
             success: function(response) {
                 if (response.success) {
+                    const newPhotos = response.data.photos;
                     if (offset === 0) {
-                        allPhotos = response.data.photos; // Store the response data
-                        $('.photos').html(generatePhotosHtml(response.data.photos));
+                        $('.photos').html(generatePhotosHtml(newPhotos));
                     } else {
-                        allPhotos = allPhotos.concat(response.data.photos); // Append the response data
-                        $('.photos').append(generatePhotosHtml(response.data.photos));
+                        $('.photos').append(generatePhotosHtml(newPhotos));
                     }
+                    // Update window.allPhotos if needed
+                    window.allPhotos = newPhotos; // Only update with new photos
+                    window.initializeLightbox(window.allPhotos); // Ensure lightbox is updated
                 } else {
                     console.log(response.data.message);
                 }
@@ -55,18 +56,43 @@ jQuery(document).ready(function($) {
         });
     }
 
+    function fetchAllPhotos() {
+        $.ajax({
+            url: myAjax.ajax_url,
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                action: 'fetch_all_photos',
+                security: myAjax.nonce
+            },
+            success: function(response) {
+                if (response.success) {
+                    window.allPhotos = response.data.all_photos || []; // Ensure allPhotos is an array
+                    console.log('All photos fetched and stored:', window.allPhotos);
+                    // Initialize lightbox with fetched photos
+                    window.initializeLightbox(window.allPhotos);
+                } else {
+                    console.log(response.data.message);
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error:', status, error);
+            }
+        });
+    }
+
     function generatePhotosHtml(photos) {
         let photosHtml = '';
         photos.forEach(photo => {
-            photosHtml += `<div class="photo-item">
+            photosHtml += `<div class="photo-item" data-ref="${photo.ref}">
                 <img src="${photo.src}" alt="${photo.title}">
-                     <div class="return-info">
-                            <p class="return-title">${photo.title}</p>
-                            <p class="return-ref"> ${photo.ref}</p>
-                            <p class="return-cat">${photo.categorie.join(', ')}</p>
-                            <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
-                            <i class="fa-solid fa-expand show-full"></i>
-                        </div>
+                <div class="return-info">
+                    <p class="return-title">${photo.title}</p>
+                    <p class="return-ref">${photo.ref}</p>
+                    <p class="return-cat">${photo.categorie.join(', ')}</p>
+                    <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
+                    <i class="fa-solid fa-expand show-full"></i>
+                </div>
             </div>`;
         });
         return photosHtml;
@@ -75,18 +101,16 @@ jQuery(document).ready(function($) {
     function generateRelatedPhotosHtml(relatedPhotos) {
         let relatedPhotosHtml = '';
         relatedPhotos.forEach(photo => {
-            relatedPhotosHtml += `
-                <div class="related-photo">
-                    <img src="${photo.src}" alt="${photo.title}">
-                       <div class="return-info">
-                            <p class="return-title">${photo.title}</p>
-                            <p class="return-ref"> ${photo.ref}</p>
-                            <p class="return-cat">${photo.categorie.join(', ')}</p>
-                            <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
-                            <i class="fa-solid fa-expand show-full"></i>
-                        </div>
+            relatedPhotosHtml += `<div class="photo-item" data-ref="${photo.ref}">
+                <img src="${photo.src}" alt="${photo.title}">
+                <div class="return-info">
+                    <p class="return-title">${photo.title}</p>
+                    <p class="return-ref">${photo.ref}</p>
+                    <p class="return-cat">${photo.categorie.join(', ')}</p>
+                    <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
+                    <i class="fa-solid fa-expand show-full"></i>
                 </div>
-                `;
+            </div>`;
         });
         return relatedPhotosHtml;
     }
@@ -106,5 +130,9 @@ jQuery(document).ready(function($) {
 
     // Get main photo ID from data attribute and load related photos
     const mainPhotoId = $('.photo-block').data('main-single-id');
-    loadRelatedPhotos(mainPhotoId);
+    if (mainPhotoId) {
+        loadRelatedPhotos(mainPhotoId);
+    }
+    
+    fetchAllPhotos();
 });
