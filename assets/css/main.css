@@ -124,14 +124,14 @@ body .page-content {
 .primary-menu-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   max-width: 1440px;
   height: 80px;
 }
 
 .logo {
   margin-left: 10.27vw;
-  margin-right: 30vw;
+  margin-right: 38vw;
 }
 
 .nav {
@@ -152,6 +152,10 @@ body .page-content {
 body.lock {
   overflow: hidden;
   max-height: 100vh;
+}
+
+.photo-template-default .primary-menu-wrapper {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
 }
 
 .contact-popup {
@@ -662,8 +666,8 @@ body .page-content.hidden {
 }
 
 .lightbox-container {
-  margin-left: 250px;
-  margin-right: 200px;
+  margin-left: 200px;
+  margin-right: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -702,6 +706,7 @@ body .page-content.hidden {
   color: white;
   text-transform: uppercase;
   font-family: "Space Mono", monospace;
+  letter-spacing: 2px;
 }
 
 .lightbox-reference {

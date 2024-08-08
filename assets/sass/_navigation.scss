@@ -46,7 +46,7 @@
 .primary-menu-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: flex-start; 
     max-width: 1440px;
     height: 80px;
    // margin: 0 auto; //to verify
@@ -54,7 +54,7 @@
 
 .logo {
    margin-left: 10.27vw;
-   margin-right: 30vw;
+   margin-right: 38vw;
     
 }
 
@@ -86,7 +86,10 @@ body.lock {
 }
 
 
-
+//effet ombre single photo
+.photo-template-default .primary-menu-wrapper {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+}
 
 
 
