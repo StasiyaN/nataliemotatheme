@@ -3,7 +3,9 @@
    @media (max-width: $tablet) {
    #footer ul {
         flex-direction: column;
-        height: 208px;
+        height: 150px;
+        justify-content: flex-end;
+        padding-left: 0;
     }
     li {
         margin-bottom: 24px;

@@ -321,6 +321,7 @@ body .page-content.hidden {
   }
   #main ul {
     flex-direction: column;
+    padding-left: 0;
   }
   #main ul li {
     padding-bottom: 20px;
@@ -353,13 +354,14 @@ body .page-content.hidden {
     font-size: 44px;
     color: #fff;
     margin-top: -40px;
-    margin-left: 45px;
   }
 }
 @media (max-width: 768px) {
   #footer ul {
     flex-direction: column;
-    height: 208px;
+    height: 150px;
+    justify-content: flex-end;
+    padding-left: 0;
   }
   li {
     margin-bottom: 24px;
