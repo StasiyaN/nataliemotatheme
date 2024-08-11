@@ -12,7 +12,7 @@ body {
         font-size: $h1-fs-dt;
         color: transparent;
         -webkit-text-stroke: 2px white;
-        padding-top: 350px;
+       // padding-top: 350px;
         margin-top: 0;
        
     }
@@ -69,20 +69,28 @@ body {
     margin-top: 0;
 }
 
-/* Ensure front-page-body appears below the banner */
+.hero {
+    position: relative;
+    background-size: cover !important;
+    height: 962px;
+    background-position: center !important;
+    text-align: center;
+    }
+
+    .hero-content {
+        position: relative;
+        top: 350px;
+
+    }
+
+
 .front-page-body {
     //margin-top: 962px; /* Same height as .banner */
     position: relative;
     z-index: 1;
 }
 
-.hero {
-    position: relative;
-    background-size: cover !important;
-    height: 962px !important;
-    background-position: center !important;
-    text-align: center;
-    }
+
 
 
     #load-more {

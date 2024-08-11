@@ -10,6 +10,7 @@ $fw-bold: 700;
 
 //font sizes desktop & mobile
 $h1-fs-dt: 96px;
+$h1-fs-tb: 60px;
 $h1-fs-mob: 27.59px;
 $h2-fs-dt: 66px;
 $h2-fs-mob: 46px;
@@ -34,7 +35,8 @@ $color-secondary-grey: #B8BBC2;
 
 //breakpoints
 $desktop: 1440px;
-$laptop: 1280px;
+$laptop: 1294px;
 $laptopS: 1024px;
 $tablet: 768px;
-$mobile: 465px;
+$mobile: 425px;
+$mobileS: 375px;
