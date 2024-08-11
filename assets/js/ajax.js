@@ -28,7 +28,7 @@ jQuery(document).ready(function($) {
                     }
                     // No need to update window.allPhotos, lightbox will use all photos
                 } else {
-                    $('.photos').append('<p>No photos found.</p>');
+                    $('.photos').html('<p>Aucune photo correspondante</p>');
                 }
             },
             error: function(xhr, status, error) {
