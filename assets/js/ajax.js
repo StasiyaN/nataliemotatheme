@@ -26,12 +26,13 @@ jQuery(document).ready(function($) {
                     } else {
                         $('.photos').append(generatePhotosHtml(newPhotos));
                     }
-                    // Update window.allPhotos if needed
-                    window.allPhotos = newPhotos; // Only update with new photos
-                    window.initializeLightbox(window.allPhotos); // Ensure lightbox is updated
+                    // No need to update window.allPhotos, lightbox will use all photos
                 } else {
-                    console.log(response.data.message);
+                    $('.photos').append('<p>No photos found.</p>');
                 }
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error:', status, error);
             }
         });
     }
@@ -52,6 +53,9 @@ jQuery(document).ready(function($) {
                 } else {
                     $('.photo-single-unit').html('<p>No related photos found.</p>');
                 }
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error:', status, error);
             }
         });
     }
@@ -67,9 +71,9 @@ jQuery(document).ready(function($) {
             },
             success: function(response) {
                 if (response.success) {
-                    window.allPhotos = response.data.all_photos || []; // Ensure allPhotos is an array
+                    window.allPhotos = response.data.all_photos || []; // Store all photos
                     console.log('All photos fetched and stored:', window.allPhotos);
-                    // Initialize lightbox with fetched photos
+                    // Initialize lightbox with all photos
                     window.initializeLightbox(window.allPhotos);
                 } else {
                     console.log(response.data.message);
@@ -134,5 +138,6 @@ jQuery(document).ready(function($) {
         loadRelatedPhotos(mainPhotoId);
     }
     
+    // Fetch all photos for lightbox
     fetchAllPhotos();
 });

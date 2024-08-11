@@ -12,7 +12,7 @@
                 <select id="categorie" name="categorie" class ="dropdown-box">
                     <option value="">Catégories</option>
                     <?php
-                    $categories = get_terms('categorie'); // Adjust taxonomy name if needed
+                    $categories = get_terms('categorie');
                     foreach ($categories as $categorie) {
                         echo '<option value="' . esc_attr($categorie->slug) . '">' . esc_html($categorie->name) . '</option>';
                     }
@@ -23,7 +23,7 @@
                 <select id="format" name="format" class ="dropdown-box">
                     <option value="">Formats</option>
                     <?php
-                    $formats = get_terms('format'); // Adjust taxonomy name if needed
+                    $formats = get_terms('format'); 
                     foreach ($formats as $format) {
                         echo '<option value="' . esc_attr($format->slug) . '">' . esc_html($format->name) . '</option>';
                     }
