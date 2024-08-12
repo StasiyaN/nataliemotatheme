@@ -671,7 +671,7 @@ body .page-content.hidden {
 }
 
 .lightbox-container {
-  margin-left: 200px;
+  margin-left: 160px;
   margin-right: 150px;
   display: flex;
   align-items: center;
@@ -701,7 +701,7 @@ body .page-content.hidden {
 }
 
 .lightbox-prev {
-  left: 4%;
+  left: 3%;
 }
 
 .lightbox-reference,
@@ -774,6 +774,14 @@ body .page-content.hidden {
   .contact-block {
     gap: 450px;
   }
+  .fa-solid {
+    background-color: #000;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  .lightbox-txt {
+    background-color: #000;
+  }
 }
 @media (max-width: 794px) {
   body h1 {
@@ -792,6 +800,7 @@ body .page-content.hidden {
     margin: 0;
   }
   #filter-form {
+    margin-left: 40px;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
@@ -848,11 +857,6 @@ body .page-content.hidden {
   }
   .lightbox-txt {
     display: none;
-  }
-  .fa-solid {
-    background-color: #000;
-    border-radius: 8px;
-    padding: 10px;
   }
 }
 @media (max-width: 425px) {

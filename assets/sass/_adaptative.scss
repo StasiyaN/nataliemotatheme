@@ -48,6 +48,17 @@
     .contact-block {
         gap: 450px;
     }
+
+    //lightbox
+    .fa-solid {
+        background-color: $color-black;
+        border-radius: 8px;
+        padding: 10px;
+    }
+    .lightbox-txt {
+        background-color: $color-black;
+    }
+
 }
 
 
@@ -71,6 +82,7 @@
         margin: 0;
     }
     #filter-form {
+        margin-left: 40px;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
@@ -142,11 +154,7 @@
         display: none;
     }
 
-    .fa-solid {
-        background-color: $color-black;
-        border-radius: 8px;
-        padding: 10px;
-    }
+   
 }
 
 @media (max-width: $mobile) {
