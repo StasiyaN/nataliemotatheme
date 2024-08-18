@@ -75,16 +75,24 @@ function loadPhotos() {
                 
                 // Debugging output
                 console.log('Photos loaded:', newPhotos.length);
-                
+    
+                // Check if there are no more photos to load
+                if (newPhotos.length < 8) {
+                    $('#load-more').hide(); // Hide load-more button if fewer than 8 photos are returned
+                } else {
+                    $('#load-more').show(); // Ensure the load-more button is visible when there are more photos to load
+                }
 
                 if (offset === 0) {
                     $('.photos').html(generatePhotosHtml(newPhotos));
                 } else {
                     $('.photos').append(generatePhotosHtml(newPhotos));
-                    $('#load-more').hide(); 
                 }
-             
-            } 
+            } else {
+                console.log('No photos found for the current filters');
+                $('.photos').html('<p>Aucune photo correspondante</p>');
+                $('#load-more').hide(); // Hide load-more button if no photos match the filter
+            }
         },
         error: function(xhr, status, error) {
             console.error('AJAX Error:', status, error);
