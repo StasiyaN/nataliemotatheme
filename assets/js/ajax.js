@@ -2,9 +2,10 @@ jQuery(document).ready(function($) {
     let offset = 0;
 
     function loadPhotos() {
-        const categorie = $('#categorie').val();
-        const format = $('#format').val();
-        const sort = $('#sort').val();
+        //value input from custom filters
+        const categorie = $('input[name="categorie"]').val(); // Use hidden input value
+        const format = $('input[name="format"]').val();     // Use hidden input value
+        const sort = $('input[name="sort"]').val();   
 
         $.ajax({
             url: myAjax.ajax_url,
@@ -21,6 +22,14 @@ jQuery(document).ready(function($) {
             success: function(response) {
                 if (response.success) {
                     const newPhotos = response.data.photos;
+
+                    // Check if there are no more photos to load
+                    if (newPhotos.length < 8) {
+                        $('#load-more').hide(); // Hide load-more button if fewer than 8 photos are returned
+                    } else {
+                        $('#load-more').show(); // Ensure the load-more button is visible when there are more photos to load
+                    }
+
                     if (offset === 0) {
                         $('.photos').html(generatePhotosHtml(newPhotos));
                     } else {
@@ -28,8 +37,10 @@ jQuery(document).ready(function($) {
                     }
                     // No need to update window.allPhotos, lightbox will use all photos
                 } else {
+                    console.log('No photos found for the current filters');
                     $('.photos').html('<p>Aucune photo correspondante</p>');
-                }
+                    $('#load-more').hide(); // Hide load-more button if no photos match the filter
+                   }
             },
             error: function(xhr, status, error) {
                 console.error('AJAX Error:', status, error);
@@ -38,6 +49,8 @@ jQuery(document).ready(function($) {
     }
 
     function loadRelatedPhotos(mainPhotoId) {
+        console.log('Loading related photos for mainPhotoId:', mainPhotoId); // Debugging line
+       
         $.ajax({
             url: myAjax.ajax_url,
             type: 'POST',
@@ -49,6 +62,7 @@ jQuery(document).ready(function($) {
             },
             success: function(response) {
                 if (response.success) {
+                    console.log('Related photos loaded:', response.data.related_photos.length); // Debugging line
                     $('.photo-single-unit').html(generateRelatedPhotosHtml(response.data.related_photos));
                 } else {
                     $('.photo-single-unit').html('<p>No related photos found.</p>');
@@ -60,6 +74,12 @@ jQuery(document).ready(function($) {
         });
     }
 
+
+        // Get main photo ID from data attribute and load related photos
+        const mainPhotoId = $('.photo-block').data('main-single-id');
+        if (mainPhotoId) {
+            loadRelatedPhotos(mainPhotoId);
+        }
     function fetchAllPhotos() {
         $.ajax({
             url: myAjax.ajax_url,
@@ -132,11 +152,7 @@ jQuery(document).ready(function($) {
     // Initial load
     loadPhotos();
 
-    // Get main photo ID from data attribute and load related photos
-    const mainPhotoId = $('.photo-block').data('main-single-id');
-    if (mainPhotoId) {
-        loadRelatedPhotos(mainPhotoId);
-    }
+  
     
     // Fetch all photos for lightbox
     fetchAllPhotos();
