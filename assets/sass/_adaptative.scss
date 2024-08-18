@@ -12,7 +12,7 @@
 
 @media (max-width: 1178px) {
   //frong page
-    #filter-form {
+    .custom-dropdown {
         justify-content: center;
     }
     #format {
@@ -81,7 +81,7 @@
     .gallery {
         margin: 0;
     }
-    #filter-form {
+   .custom-dropdown{
         margin-left: 40px;
         flex-direction: column;
         flex-wrap: wrap;
@@ -153,8 +153,38 @@
     .lightbox-txt {
         display: none;
     }
-
+    //burger menu
+    #main ul li a:hover,
+    #contactBtn:hover {
+        font-weight: $fw-regular !important;
+    }
    
+    //filtres
+    .dropdown-list .dropdown-list-item:first-child {
+        display: block;
+        background: white;
+        color: white;
+        height: 10px;
+    }
+    
+}
+
+@media (max-width: 666px) {
+    //popup contact
+    .popup-wrapper {
+        width: 350px;
+        height: auto;
+    }
+
+    .popup-header {
+        top: 25px;
+        width: 459px;
+        height: 55px;
+    }
+
+    .form {
+        margin-top: 100px;
+    }
 }
 
 @media (max-width: $mobile) {
@@ -190,6 +220,10 @@
         width: 350px;
         height: 350px;
         
+    }
+
+    .popup-wrapper {
+        width: 280px;
     }
 
 }

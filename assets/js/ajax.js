@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-    // Handle the custom dropdown interactions
+// Handle the custom dropdown interactions
 function handleCustomDropdown() {
     document.querySelectorAll('.dropdown').forEach(function (dropdownWrapper) {
         const dropDownBtn = dropdownWrapper.querySelector('.dropdown-btn');
@@ -90,7 +90,6 @@ function loadPhotos() {
                 }
             } else {
                 console.log('No photos found for the current filters');
-                $('.photos').html('<p>Aucune photo correspondante</p>');
                 $('#load-more').hide(); // Hide load-more button if no photos match the filter
             }
         },
@@ -101,121 +100,120 @@ function loadPhotos() {
 }
 
 
-function loadRelatedPhotos(mainPhotoId) {
-    console.log('Loading related photos for mainPhotoId:', mainPhotoId); // Debugging line
+    function loadRelatedPhotos(mainPhotoId) {
+        console.log('Loading related photos for mainPhotoId:', mainPhotoId); // Debugging line
 
-    $.ajax({
-        url: myAjax.ajax_url,
-        type: 'POST',
-        dataType: 'json',
-        data: {
-            action: 'load_related_photos',
-            security: myAjax.nonce,
-            main_photo_id: mainPhotoId,
-        },
-        success: function(response) {
-            if (response.success) {
-                console.log('Related photos loaded:', response.data.related_photos.length); // Debugging line
-                $('.photo-single-unit').html(generateRelatedPhotosHtml(response.data.related_photos));
-            } else {
-                console.log('No related photos found for mainPhotoId:', mainPhotoId); // Debugging line
-                $('.photo-single-unit').html('<p>No related photos found.</p>');
-            }
-        },
-        error: function(xhr, status, error) {
-            console.error('AJAX Error:', status, error);
+            $.ajax({
+                url: myAjax.ajax_url,
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    action: 'load_related_photos',
+                    security: myAjax.nonce,
+                    main_photo_id: mainPhotoId,
+                },
+                success: function(response) {
+                    if (response.success) {
+                        console.log('Related photos loaded:', response.data.related_photos.length); // Debugging line
+                        $('.photo-single-unit').html(generateRelatedPhotosHtml(response.data.related_photos));
+                    } else {
+                        console.log('No related photos found for mainPhotoId:', mainPhotoId); // Debugging line
+                        $('.photo-single-unit').html('<p>No related photos found.</p>');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('AJAX Error:', status, error);
+                }
+            });
         }
-    });
-}
 
-// Get main photo ID from data attribute and load related photos
-const mainPhotoId = $('.photo-block').data('main-single-id');
-if (mainPhotoId) {
-    loadRelatedPhotos(mainPhotoId);
-}
-function fetchAllPhotos() {
-    $.ajax({
-        url: myAjax.ajax_url,
-        type: 'POST',
-        dataType: 'json',
-        data: {
-            action: 'fetch_all_photos',
-            security: myAjax.nonce
-        },
-        success: function(response) {
-            if (response.success) {
-                window.allPhotos = response.data.all_photos || []; // Store all photos
-                console.log('All photos fetched and stored:', window.allPhotos);
-                // Initialize lightbox with all photos
-                window.initializeLightbox(window.allPhotos);
-            } else {
-                console.log(response.data.message);
-            }
-        },
-        error: function(xhr, status, error) {
-            console.error('AJAX Error:', status, error);
+        // Get main photo ID from data attribute and load related photos
+        const mainPhotoId = $('.photo-block').data('main-single-id');
+        if (mainPhotoId) {
+            loadRelatedPhotos(mainPhotoId);
         }
-    });
-}
+        function fetchAllPhotos() {
+            $.ajax({
+                url: myAjax.ajax_url,
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    action: 'fetch_all_photos',
+                    security: myAjax.nonce
+                },
+                success: function(response) {
+                    if (response.success) {
+                        window.allPhotos = response.data.all_photos || []; // Store all photos
+                        console.log('All photos fetched and stored:', window.allPhotos);
+                        // Initialize lightbox with all photos
+                        window.initializeLightbox(window.allPhotos);
+                    } else {
+                        console.log(response.data.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('AJAX Error:', status, error);
+                }
+            });
+        }
 
-function generatePhotosHtml(photos) {
-    let photosHtml = '';
-    photos.forEach(photo => {
-        photosHtml += `<div class="photo-item" data-ref="${photo.ref}">
-            <img src="${photo.src}" alt="${photo.title}">
-            <div class="return-info">
-                <p class="return-title">${photo.title}</p>
-                <p class="return-ref">${photo.ref}</p>
-                <p class="return-cat">${photo.categorie.join(', ')}</p>
-                <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
-                <i class="fa-solid fa-expand show-full"></i>
-            </div>
-        </div>`;
-    });
-    return photosHtml;
-}
+        function generatePhotosHtml(photos) {
+            let photosHtml = '';
+            photos.forEach(photo => {
+                photosHtml += `<div class="photo-item" data-ref="${photo.ref}">
+                    <img src="${photo.src}" alt="${photo.title}">
+                    <div class="return-info">
+                        <p class="return-title">${photo.title}</p>
+                        <p class="return-ref">${photo.ref}</p>
+                        <p class="return-cat">${photo.categorie.join(', ')}</p>
+                        <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
+                        <i class="fa-solid fa-expand show-full"></i>
+                    </div>
+                </div>`;
+            });
+            return photosHtml;
+        }
 
-function generateRelatedPhotosHtml(relatedPhotos) {
-    let relatedPhotosHtml = '';
-    relatedPhotos.forEach(photo => {
-        relatedPhotosHtml += `<div class="photo-item" data-ref="${photo.ref}">
-            <img src="${photo.src}" alt="${photo.title}">
-            <div class="return-info">
-                <p class="return-title">${photo.title}</p>
-                <p class="return-ref">${photo.ref}</p>
-                <p class="return-cat">${photo.categorie.join(', ')}</p>
-                <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
-                <i class="fa-solid fa-expand show-full"></i>
-            </div>
-        </div>`;
-    });
-    return relatedPhotosHtml;
-}
-
-
-
-$('#filter-form select').change(function(){
-    offset = 0;
-    loadPhotos();
-});
+        function generateRelatedPhotosHtml(relatedPhotos) {
+            let relatedPhotosHtml = '';
+            relatedPhotos.forEach(photo => {
+                relatedPhotosHtml += `<div class="photo-item" data-ref="${photo.ref}">
+                    <img src="${photo.src}" alt="${photo.title}">
+                    <div class="return-info">
+                        <p class="return-title">${photo.title}</p>
+                        <p class="return-ref">${photo.ref}</p>
+                        <p class="return-cat">${photo.categorie.join(', ')}</p>
+                        <a href="${photo.url}" class="view-photo"><i class="fa fa-eye"></i></a>
+                        <i class="fa-solid fa-expand show-full"></i>
+                    </div>
+                </div>`;
+            });
+            return relatedPhotosHtml;
+        }
 
 
 
-$('#load-more').click(function() {
-    offset += 8;
-    loadPhotos();
-});
-
-// Initial load
-loadPhotos();
+        $('#filter-form select').change(function(){
+            offset = 0;
+            loadPhotos();
+        });
 
 
 
-// Fetch all photos for lightbox
-fetchAllPhotos();
+        $('#load-more').click(function() {
+            offset += 8;
+            loadPhotos();
+        });
 
-handleCustomDropdown();
+        // Initial load
+        loadPhotos();
 
+
+
+        // Fetch all photos for lightbox
+        fetchAllPhotos();
+
+        handleCustomDropdown();
 
 
 });
