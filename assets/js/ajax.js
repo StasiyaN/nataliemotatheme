@@ -1,4 +1,51 @@
 jQuery(document).ready(function($) {
+    function handleCustomDropdown() {
+        document.querySelectorAll('.dropdown').forEach(function (dropdownWrapper) {
+            const dropDownBtn = dropdownWrapper.querySelector('.dropdown-btn');
+            const dropDownList = dropdownWrapper.querySelector('.dropdown-list');
+            const dropDownListItems = dropDownList.querySelectorAll('.dropdown-list-item');
+            const inputVal = dropdownWrapper.querySelector('.option-val');
+
+                dropDownBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+                dropDownList.classList.toggle('dropdown-open');
+                if(dropDownList.classList.contains('dropdown-open')) {
+                    dropDownBtn.classList.add('up');
+                } else {
+                    dropDownBtn.classList.remove('up');
+                }
+            }); 
+
+         dropDownListItems.forEach(function (listItem) {
+                listItem.addEventListener('click', function (e) {
+                    e.stopPropagation();                    
+                    // Set the button text to the selected item
+                    dropDownBtn.innerText = this.innerText;
+                    // Close the dropdown list
+                    dropDownList.classList.remove('dropdown-open');
+                    dropDownBtn.classList.remove('up');
+                    // Set the hidden input value to the selected item's data-value
+                    inputVal.value = this.dataset.value;
+                    dropDownListItems.forEach(item => item.classList.remove('clicked'));
+                    this.classList.add('clicked');
+    
+                    // Reset the offset and reload photos
+                    loadPhotos();
+                });
+            });
+
+            document.addEventListener('click', function (e) {
+                if (e.target !== dropDownBtn) {
+                    dropDownList.classList.remove('dropdown-open');
+                }
+            });
+        });
+    }
+
+
+
     let offset = 0;
 
     function loadPhotos() {
@@ -22,25 +69,27 @@ jQuery(document).ready(function($) {
             success: function(response) {
                 if (response.success) {
                     const newPhotos = response.data.photos;
-
+                    
+                    // Debugging output
+                    console.log('Photos loaded:', newPhotos.length);
+    
                     // Check if there are no more photos to load
                     if (newPhotos.length < 8) {
                         $('#load-more').hide(); // Hide load-more button if fewer than 8 photos are returned
                     } else {
                         $('#load-more').show(); // Ensure the load-more button is visible when there are more photos to load
                     }
-
+    
                     if (offset === 0) {
                         $('.photos').html(generatePhotosHtml(newPhotos));
                     } else {
                         $('.photos').append(generatePhotosHtml(newPhotos));
                     }
-                    // No need to update window.allPhotos, lightbox will use all photos
                 } else {
                     console.log('No photos found for the current filters');
                     $('.photos').html('<p>Aucune photo correspondante</p>');
                     $('#load-more').hide(); // Hide load-more button if no photos match the filter
-                   }
+                }
             },
             error: function(xhr, status, error) {
                 console.error('AJAX Error:', status, error);
@@ -156,4 +205,8 @@ jQuery(document).ready(function($) {
     
     // Fetch all photos for lightbox
     fetchAllPhotos();
+
+    //custom filters
+    handleCustomDropdown();
+
 });

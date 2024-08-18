@@ -14,6 +14,8 @@ function filter_photos_ajax_handler() {
         'post_type' => 'photo',
         'posts_per_page' => 8, // Number of photos per page
         'offset' => $offset,
+        'meta_query' => array(),
+        'tax_query' => array('relation' => 'AND')
     );
 
     if (!empty($categorie)) {

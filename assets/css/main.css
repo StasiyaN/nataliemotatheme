@@ -541,30 +541,119 @@ body .page-content.hidden {
   margin-bottom: 40px;
 }
 
-#filter-form {
+.custom-dropdown {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
 }
 
-#format {
-  margin-right: 320px;
+.dropdown-btn {
+  position: relative;
+  width: 260px;
+  height: 42px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  padding-left: 15px;
+  text-align: left;
+  background: white;
+  border: 0.5px solid grey;
+  cursor: pointer;
+}
+
+.dropdown-btn:focus {
+  border-color: blue;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.dropdown-btn::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: 15px;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: rotate(45deg);
+  pointer-events: none; /* Prevent the arrow from interfering with button clicks */
+  z-index: 15;
+}
+
+.dropdown-btn.up::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 15px;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: rotate(225deg);
+  pointer-events: none; /* Prevent the arrow from interfering with button clicks */
+  z-index: 15;
+}
+
+.dropdown-filter {
+  position: relative;
+}
+
+.dropdown-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  list-style-type: none;
+  background: white;
+  overflow: hidden;
+  border-radius: 8px;
+  width: 260px;
+  z-index: 100;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.dropdown-open {
+  display: block;
+}
+
+.dropdown-list .dropdown-list-item:first-child {
+  display: block;
+  background: white;
+  color: white;
+}
+
+.dropdown-list-item {
+  margin: 0;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  padding: 10px 15px;
+}
+
+.dropdown-list-item:hover {
+  background: #FFD6D6;
+}
+
+.dropdown-list-item:active {
+  background: #FE5858;
+}
+
+.dropdown-list-item.clicked {
+  color: white;
+  background: #E00000;
 }
 
 #categorie {
   margin-right: 36px;
 }
 
-.dropdown-box {
-  width: 260px !important;
-  height: 42px !important;
-  border-radius: 8px !important;
-  text-transform: uppercase;
-  padding-left: 10px;
+#format {
+  margin-right: 320px;
 }
 
-.dropdown-box option:not(:first-child) {
-  text-transform: none !important;
-  font-family: "Poppins", sans-serif;
+.custom-dropdown {
+  margin-top: 80px;
+  margin-bottom: 40px;
 }
 
 .photo-item,
