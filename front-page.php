@@ -8,7 +8,7 @@
     <div class="gallery">
         <div class="custom-dropdown">
                 <div class="dropdown">
-                    <button id = "categorie" class="dropdown-btn" data-default="Catégories">Catégories
+                    <button id = "categorie" class="dropdown-btn filters" data-default="Catégories">Catégories
                     <!-- <span class="dropdown-arrow"></span> -->
                     </button>
                     <ul class="dropdown-list">
@@ -23,7 +23,7 @@
                     <input type="hidden" name="categorie" class="option-val">
                 </div>
                     <div class="dropdown">
-                        <button id = "format"class="dropdown-btn" data-default="Formats">Formats
+                        <button id = "format"class="dropdown-btn filters" data-default="Formats">Formats
                         <!-- <span class="dropdown-arrow"></span> -->
                         </button>
                         <ul class="dropdown-list">
@@ -38,7 +38,7 @@
                         <input type="hidden" name="format" class="option-val">
                     </div>
                         <div class="dropdown">
-                            <button class="dropdown-btn" data-default="Trier par">Trier par
+                            <button class="dropdown-btn filters" data-default="Trier par">Trier par
                             <!-- <span class="dropdown-arrow"></span> -->
                             </button>
                             <ul class="dropdown-list">
