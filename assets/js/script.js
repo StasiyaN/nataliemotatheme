@@ -1,6 +1,7 @@
+
+
 document.addEventListener('DOMContentLoaded', function () {
     console.log('main script loaded');
-    // Declaration de variables
     // Declaration de variables
     let burgerBtn = document.querySelector('.burger-menu');
     let menuContent = document.querySelector('.nav');
@@ -37,15 +38,16 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.addEventListener('click', function () {
         popupWindow.classList.remove('active');
     });
+    
     //propritété de l'element = fonction si null 0 propriete 
     //si n'est pas null
-    if (contactBtn)  {        
-            contactBtn.addEventListener('click', function () {
+    if (contactBtnSingle)  {        
+            contactBtnSingle.addEventListener('click', function () {
                 popupWindow.classList.add('active');
                 
                 // Ensure the button has the dataset attribute
                 
-                const photoReference = contactBtn.dataset.photoRef;
+                const photoReference = contactBtnSingle.dataset.photoRef;
                 const photoRefField = document.getElementById('photoReference');
                 
                 // Check if both the reference and the field are available

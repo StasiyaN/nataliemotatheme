@@ -53,15 +53,21 @@ body {
     }
 
 
-.btn {
-    width: 272px;
-    height: 50px;
-    background-color: $color-light-grey;
-    font-family: $ff-space-mono;
-    font-size: 12px;
-    border: none;
-    cursor: pointer;
-}
+    .btn {
+        width: 272px;
+        height: 50px;
+        background-color: $color-light-grey;
+        font-family: $ff-space-mono;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.5s ease, transform 0.5s ease;
+    }
+
+    .btn:hover {
+        background-color: $color-black;
+        color: white;
+    }
 
 
 /* banniere */

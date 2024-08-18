@@ -54,6 +54,12 @@ body .page-content {
   font-size: 12px;
   border: none;
   cursor: pointer;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.btn:hover {
+  background-color: #000;
+  color: white;
 }
 
 /* banniere */
