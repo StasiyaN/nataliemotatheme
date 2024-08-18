@@ -1,6 +1,6 @@
 
       <div class="lightbox">
-              <span class="lightbox-close"><i class="fa-solid fa-xmark"></i></span>
+              <span class="lightbox-close"><i class="fa-solid fa-xmark fa-2x"></i></span>
               <span class="lightbox-next"><p class ="lightbox-txt">Suivante</p><i class="fa-solid fa-arrow-right-long"></i></span>
               <span class="lightbox-prev"><i class="fa-solid fa-arrow-left-long"></i><p class="lightbox-txt">Précédente</p></span>
                   <div class="lightbox-container">

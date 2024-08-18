@@ -16,7 +16,7 @@
 .fa-solid,
 .fa-regular {
     color: white !important;
-    font-size: 20px !important;
+    //font-size: 20px !important;
 }
 
 .lightbox-container {
@@ -78,6 +78,7 @@
     position: fixed;
     top: 5%;
     right: 7%;
+    font-size: 30px;
 
 }
 
@@ -85,5 +86,18 @@
 .lightbox-next,
 .lightbox-close {
     cursor: pointer;
+}
+
+//hover effects
+.lightbox-next:hover .lightbox-txt, 
+.lightbox-prev:hover .lightbox-txt {
+    font-weight: bold; /* Apply bold font weight */
+}
+
+
+.lightbox-next:hover .fa-arrow-right-long,
+.lightbox-prev:hover .fa-arrow-left-long {
+    transform: scaleX(1.7); /* Scale the icon */
+    transition: transform 0.3s ease; /* Add a smooth transition */
 }
 
