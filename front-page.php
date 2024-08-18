@@ -49,9 +49,9 @@
                             <input type="hidden" name="sort" class="option-val">
                         </div>
                     </div>
-                        <div class="no-photos-message">
+                        <!-- <div class="no-photos-message">
                                 <p>Aucune photo ne correspond à votre recherche</p>
-                            </div>
+                            </div> -->
 
 
                                 <?php get_template_part( 'template-parts/photo-gallery');?>

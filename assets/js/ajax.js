@@ -76,26 +76,22 @@ function loadPhotos() {
                   // Debugging output
                   console.log('Photos loaded:', newPhotos.length);
     
-                             // Check if no photos are returned and offset is 0
-                if (newPhotos.length === 0 && offset === 0) {
-                    $('.photos').html(''); // Clear existing photos
-                    $('.photos').append('<p>No photos correspond to your search.</p>'); // Display no photos message
-                    $('#load-more').hide(); // Hide the load-more button
+                // Check if there are no more photos to load
+                if (newPhotos.length < 8) {
+                    $('#load-more').hide(); // Hide load-more button if fewer than 8 photos are returned
                 } else {
-                    // If photos are returned, hide the no photos message
                     $('#load-more').show(); // Ensure the load-more button is visible when there are more photos to load
-
-                    if (offset === 0) {
-                        $('.photos').html(generatePhotosHtml(newPhotos));
-                    } else {
-                        $('.photos').append(generatePhotosHtml(newPhotos));
-                    }
-
-                    // Check if there are fewer than 8 photos returned and hide the load-more button
-                    if (newPhotos.length < 8) {
-                        $('#load-more').hide();
-                    }
                 }
+
+                if (offset === 0) {
+                    $('.photos').html(generatePhotosHtml(newPhotos));
+                } else {
+                    $('.photos').append(generatePhotosHtml(newPhotos));
+                }
+            } else {
+                console.log('No photos found for the current filters');
+                $('.photos').html('<p>Aucune photo correspondante</p>');
+                $('#load-more').hide(); // Hide load-more button if no photos match the filter
             }
         },
         error: function(xhr, status, error) {
