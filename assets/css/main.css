@@ -618,8 +618,16 @@ body .page-content.hidden {
 
 .dropdown-list .dropdown-list-item:first-child {
   display: block;
-  background: white;
   color: white;
+  background: white;
+  width: 260px;
+}
+
+.dropdown-list .dropdown-list-item.clicked:first-child {
+  display: block;
+  background: white !important;
+  color: white;
+  width: 260px;
 }
 
 .dropdown-list-item {
