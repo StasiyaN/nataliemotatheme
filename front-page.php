@@ -8,7 +8,7 @@
         <div class="gallery">
             <div class="custom-dropdown">
                 <div class="dropdown">
-                    <button id = "categorie" class="dropdown-btn filters" data-default="Catégories">Catégories</button>
+                    <button id = "categorie-btn" class="dropdown-btn filters" data-default="Catégories">Catégories</button>
                     <ul class="dropdown-list">
                         <li id="categorie" data-value="" class="dropdown-list-item">Catégories</li>
                             <?php
@@ -21,7 +21,7 @@
                         <input type="hidden" name="categorie" class="option-val">
                 </div>
                     <div class="dropdown">
-                        <button id = "format"class="dropdown-btn filters" data-default="Formats">Formats</button>
+                        <button id = "format-btn" class="dropdown-btn filters" data-default="Formats">Formats</button>
                         <ul class="dropdown-list">
                             <li id="format" data-value="" class="dropdown-list-item">Formats</li>
                                 <?php

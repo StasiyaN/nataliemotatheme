@@ -46,7 +46,6 @@ jQuery(document).ready(function($) {
         });
     }
     
-    
     let offset = 0;
     
     function loadPhotos() {
@@ -181,12 +180,6 @@ jQuery(document).ready(function($) {
         });
         return relatedPhotosHtml;
     }
-    
-    
-    
-    
-    
-    
     $('#load-more').click(function() {
         offset += 8;
         loadPhotos();
@@ -194,14 +187,9 @@ jQuery(document).ready(function($) {
     
     // Initial load
     loadPhotos();
-    
-    
-    
+
     // Fetch all photos for lightbox
     fetchAllPhotos();
     
     handleCustomDropdown();
-    
-    
-    
 });
