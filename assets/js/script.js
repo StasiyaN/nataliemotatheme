@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function () {
     console.log('main script loaded');
     // Declaration de variables
@@ -11,14 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
     let popup = document.querySelector('.popup-wrapper');
     let pageContent = document.querySelector('.page-content');
     let overlay = document.querySelector('.popup-overlay');
-
-    
     
     burgerBtn.addEventListener('click', function () {
         burgerBtn.classList.toggle('open');
         menuContent.classList.toggle('active');
         document.body.classList.toggle('lock');
-        
         
         // Close the popup if it is open
         if (popupWindow.classList.contains('active')) {
@@ -34,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
         popupWindow.classList.add('active');
     });
     
-    
     overlay.addEventListener('click', function () {
         popupWindow.classList.remove('active');
     });
@@ -42,25 +36,20 @@ document.addEventListener('DOMContentLoaded', function () {
     //propritété de l'element = fonction si null 0 propriete 
     //si n'est pas null
     if (contactBtnSingle)  {        
-            contactBtnSingle.addEventListener('click', function () {
-                popupWindow.classList.add('active');
-                
-                // Ensure the button has the dataset attribute
-                
-                const photoReference = contactBtnSingle.dataset.photoRef;
-                const photoRefField = document.getElementById('photoReference');
-                
-                // Check if both the reference and the field are available
-                if (photoReference && photoRefField) {
-                    photoRefField.value = photoReference;
-                    
-                }
-            });   
-        }
-
-        // Prevent closing the popup when clicking inside the form
-        popup.addEventListener('click', function (event) {
-            event.stopPropagation(); // This prevents the event from bubbling up to the overlay
-        });
-    
+        contactBtnSingle.addEventListener('click', function () {
+            popupWindow.classList.add('active');
+            
+            // Ensure the button has the dataset attribute
+            const photoReference = contactBtnSingle.dataset.photoRef;
+            const photoRefField = document.getElementById('photoReference');
+            // Check if both the reference and the field are available
+            if (photoReference && photoRefField) {
+                photoRefField.value = photoReference;
+            }
+        });   
+    }
+    // Prevent closing the popup when clicking inside the form
+    popup.addEventListener('click', function (event) {
+        event.stopPropagation(); // This prevents the event from bubbling up to the overlay
+    });
 });

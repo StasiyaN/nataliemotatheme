@@ -53,11 +53,7 @@ jQuery(document).ready(function($) {
         const categorie = $('input[name="categorie"]').val(); // Use hidden input value
         const format = $('input[name="format"]').val();     // Use hidden input value
         const sort = $('input[name="sort"]').val();         // Use hidden input value
-        
-        console.log('categorie:', categorie); // Debugging line
-        console.log('format:', format);       // Debugging line
-        console.log('offset:', offset);       // Debugging line
-        
+             
         $.ajax({
             url: myAjax.ajax_url,
             type: 'POST',
@@ -72,11 +68,7 @@ jQuery(document).ready(function($) {
             },
             success: function(response) {
                 if (response.success) {
-                    const newPhotos = response.data.photos;
-                    
-                    // Debugging output
-                    console.log('Photos loaded:', newPhotos.length);
-                    
+                    const newPhotos = response.data.photos;            
                     // Check if there are no more photos to load
                     if (newPhotos.length < myAjax.posts_per_page) {
                         $('#load-more').hide(); // Hide load-more button if fewer than 8 photos are returned
@@ -91,11 +83,10 @@ jQuery(document).ready(function($) {
                     }
                 } else {
                     $('#load-more').hide();
-
+                    
                     if(offset === 0) {
-                        console.log('No photos found for the current filters');
                         $('.photos').html('<p>Aucune photo correspondante</p>');
-
+                        
                     }
                 }
             },
@@ -105,10 +96,7 @@ jQuery(document).ready(function($) {
         });
     }
     
-    
     function loadRelatedPhotos(mainPhotoId) {
-        console.log('Loading related photos for mainPhotoId:', mainPhotoId); // Debugging line
-        
         $.ajax({
             url: myAjax.ajax_url,
             type: 'POST',
@@ -120,11 +108,9 @@ jQuery(document).ready(function($) {
             },
             success: function(response) {
                 if (response.success) {
-                    console.log('Related photos loaded:', response.data.related_photos.length); // Debugging line
                     $('.photo-single-unit').html(generateRelatedPhotosHtml(response.data.related_photos));
                 } else {
-                    console.log('No related photos found for mainPhotoId:', mainPhotoId); // Debugging line
-                    $('.photo-single-unit').html('<p>No related photos found.</p>');
+                    $('.photo-single-unit').html('<pAucune photo correspondante</p>');
                 }
             },
             error: function(xhr, status, error) {
@@ -150,7 +136,6 @@ jQuery(document).ready(function($) {
             success: function(response) {
                 if (response.success) {
                     window.allPhotos = response.data.all_photos || []; // Store all photos
-                    console.log('All photos fetched and stored:', window.allPhotos);
                     // Initialize lightbox with all photos
                     window.initializeLightbox(window.allPhotos);
                 } else {
