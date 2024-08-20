@@ -12,7 +12,7 @@ function filter_photos_ajax_handler() {
     // Set up the query arguments
     $args = array(
         'post_type' => 'photo',
-        'posts_per_page' => 8, // Number of photos per page
+        'posts_per_page' => get_option('posts_per_page'), // Number of photos per page
         'offset' => $offset,
         'meta_query' => array(),
         'tax_query' => array('relation' => 'AND')

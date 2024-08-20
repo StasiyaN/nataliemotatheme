@@ -78,7 +78,7 @@ jQuery(document).ready(function($) {
                     console.log('Photos loaded:', newPhotos.length);
                     
                     // Check if there are no more photos to load
-                    if (newPhotos.length < 8) {
+                    if (newPhotos.length < myAjax.posts_per_page) {
                         $('#load-more').hide(); // Hide load-more button if fewer than 8 photos are returned
                     } else {
                         $('#load-more').show(); // Ensure the load-more button is visible when there are more photos to load
@@ -90,9 +90,13 @@ jQuery(document).ready(function($) {
                         $('.photos').append(generatePhotosHtml(newPhotos));
                     }
                 } else {
-                    console.log('No photos found for the current filters');
-                    $('.photos').html('<p>Aucune photo correspondante</p>');
-                    $('#load-more').hide(); // Hide load-more button if no photos match the filter
+                    $('#load-more').hide();
+
+                    if(offset === 0) {
+                        console.log('No photos found for the current filters');
+                        $('.photos').html('<p>Aucune photo correspondante</p>');
+
+                    }
                 }
             },
             error: function(xhr, status, error) {
