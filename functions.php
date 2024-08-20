@@ -1,5 +1,5 @@
 <?php
-// Link to the ajax.php file
+// Link to the ajax-handler php file
 include get_template_directory() . '/assets/inc/ajax-handler.php';
 
 // Styles and scripts
@@ -10,7 +10,6 @@ function nataliemota_enqueue_scripts() {
     wp_enqueue_script ('main-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), null, true);
     wp_enqueue_script('ajax-js', get_template_directory_uri() . '/assets/js/ajax.js', array('jquery'), null, true);
     wp_enqueue_script('lightbox-js', get_template_directory_uri() . '/assets/js/lightbox.js', array('jquery'), null, true);
-
     // Localize the script with new data
     wp_localize_script('ajax-js', 'myAjax', array(
         'ajax_url' => admin_url('admin-ajax.php'),
@@ -40,15 +39,12 @@ function disable_wp_emoji() {
     // Remove the emoji script
     remove_action('wp_head', 'print_emoji_detection_script', 7);
     remove_action('wp_print_styles', 'print_emoji_styles');
-
     // Remove emojis from the TinyMCE editor
     add_filter('tiny_mce_plugins', 'disable_emojis_tinymce');
-
     // Remove the emoji script from the frontend
     remove_action('wp_head', 'print_emoji_script');
     remove_action('admin_print_scripts', 'print_emoji_detection_script');
     remove_action('admin_print_styles', 'print_emoji_styles');
-
     // Remove the emoji DNS prefetch
     remove_action('wp_head', 'wp_resource_hints', 2, 99);
 }
@@ -85,7 +81,7 @@ add_action('after_setup_theme', function() {
     add_theme_support('menus');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
-
+    
     // Register navigation menus
     register_nav_menus(array(
         'primary' => __('Primary Menu', 'nataliemota'),
@@ -102,16 +98,13 @@ function custom_image_sizes() {
 }
 add_action('after_setup_theme', 'custom_image_sizes');
 
-
 function random_hero_image_shortcode() {
     $args = array(
         'post_type' => 'photo',
         'posts_per_page' => 1,
         'orderby' => 'rand'
     );
-
     $query = new WP_Query($args);
-
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
@@ -119,9 +112,9 @@ function random_hero_image_shortcode() {
         }
         wp_reset_postdata();
     }
-
     ob_start();
     ?>
+    
     <div class="hero" style="background-image: url('<?php echo esc_url($image_url); ?>');">
         <div class="hero-content">
             <h1>PHOTOGRAPHE EVENT</h1>
