@@ -154,7 +154,10 @@
     #contactBtn:hover {
         font-weight: $fw-regular !important;
     }
-    
+    //popup
+    .popup-wrapper {
+        height: auto;
+    }
     //filtres
     .dropdown-list .dropdown-list-item:first-child {
         display: block;
@@ -178,7 +181,6 @@
     //popup contact
     .popup-wrapper {
         width: 350px;
-        height: auto;
     }
     
     .popup-header {

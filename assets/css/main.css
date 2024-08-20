@@ -258,7 +258,7 @@ input[type=submit] {
   display: none;
 }
 
-.active {
+.contact-popup.active {
   display: flex;
 }
 
@@ -974,6 +974,9 @@ body .page-content.hidden {
   #contactBtn:hover {
     font-weight: 400 !important;
   }
+  .popup-wrapper {
+    height: auto;
+  }
   .dropdown-list .dropdown-list-item:first-child {
     display: block;
     background: white;
@@ -993,7 +996,6 @@ body .page-content.hidden {
 @media (max-width: 666px) {
   .popup-wrapper {
     width: 350px;
-    height: auto;
   }
   .popup-header {
     top: 25px;
