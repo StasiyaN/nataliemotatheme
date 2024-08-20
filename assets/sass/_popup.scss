@@ -10,8 +10,6 @@
     background-color: rgba(0, 0, 0, 0.85); /* Dark overlay */
     z-index: 1000; /* Ensure it overlays the page content */
 }
-
-
 .popup-wrapper {
     display: flex;
     position: relative;
@@ -24,20 +22,17 @@
     overflow: hidden;
     background-color: #fff;
 }
-
 .popup-header {
     position: absolute;
     top: 18px;
 }
-
 .form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 140px;
-    }
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 140px;
+}
 .popup-name input,
 .popup-email input,
 .popup-ref-photo input {
@@ -47,7 +42,6 @@
     border-radius: 8px;
     border: 1px solid $color-secondary-grey;
 }
-
 .popup-message textarea {
     height: 210px;
     width: 263px;
@@ -55,7 +49,6 @@
     border-radius: 8px;
     border: 1px solid $color-secondary-grey;
 }
-
 label {
     display: block; /* Ensure each label is a block-level element */
     text-transform: uppercase;
@@ -64,31 +57,24 @@ label {
     font-weight: $fw-medium;
     color: $color-black;
 }
-
 input[type="submit"] {
     display: flex;
     height: 50px;
     width: 263px;
     color: $color-black;
     border: none; /* Remove the border */
-   // box-sizing: border-box;
     cursor: pointer; 
     font-family: $ff-space-mono;
     font-size: 12px;
     font-weight: $fw-regular;
     background-color: $color-grey;
 }
-
- .wpcf7-response-output {
+.wpcf7-response-output {
     display: none;
- }
-
-
+}
 .active {
     display: flex;
- }
-
- 
- body .page-content.hidden {
-   display: none;
+}
+body .page-content.hidden {
+    display: none;
 }

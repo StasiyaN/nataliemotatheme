@@ -20,14 +20,10 @@
         }
     }
 }
-
 #main ul li a:hover {
     font-weight: $fw-bold !important;
-
 }
-
-
- #contactBtn {
+#contactBtn {
     text-transform: uppercase;
     list-style-type: none;
     margin-left: 1.56vw; //22.5px
@@ -39,17 +35,14 @@
     font-size: 16px;
     cursor: pointer;
 }
-
 #contactBtn:hover {
     font-weight: $fw-bold !important;
 }
- 
-
 //main menu
 #main {
     width: 100%;
     max-width: 1440px;
-   // margin-right: 146px;
+    // margin-right: 146px;
     //margin-right: 10.14vw;
 }
 .primary-menu-wrapper {
@@ -58,13 +51,11 @@
     justify-content: flex-start; 
     max-width: 1440px;
     height: 80px;
-   // margin: 0 auto; //to verify
+    // margin: 0 auto; //to verify
 }
-
 .logo {
-   margin-left: 10.27vw;
-   margin-right: 38vw;
-    
+    margin-left: 10.27vw;
+    margin-right: 38vw;
 }
 
 .nav {
@@ -81,18 +72,11 @@
     align-items: center;
     border-top: 1px solid $color-black;
 }
-
-
 body.lock {
     overflow: hidden;
     max-height: 100vh;
 }
-
-
 //effet ombre single photo
 .photo-template-default .primary-menu-wrapper {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
 }
-
-
-

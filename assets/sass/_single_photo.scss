@@ -4,39 +4,34 @@
     height: 100%;
     margin: 0 auto;
 }
-
 .single-photo {
     h2 {
         display: inline-block;
         text-transform: uppercase;
         margin: 0;
         width: 300px;
-       // width: 250px;
+        // width: 250px;
     }
     h3  {
         text-transform: uppercase;
     }
-
-p {
-    font-family: $ff-space-mono;
-    text-transform: uppercase;
-    font-size: $photo-descr-fs;
-    font-weight: $fw-regular;
-
+    
+    p {
+        font-family: $ff-space-mono;
+        text-transform: uppercase;
+        font-size: $photo-descr-fs;
+        font-weight: $fw-regular;
+    }
 }
-}
-
 .single-photo-content {
     display: flex;
     flex-direction: column;
     margin-left: 145px;
-    
 }
-
 .info-photo-block {
     display: flex;
     flex-direction: row;
-   justify-content: space-between;
+    justify-content: space-between;
 }
 .ref {
     margin-bottom: 61px;
@@ -48,59 +43,38 @@ p {
     flex-direction: column;
     justify-content: flex-end;
     width: 47.5%;
-   // gap: 5%
-  }
-
-//   .info-block {
-//     width: 564px;
-//     //width: 40%
-//     }
-//   .photo-block {
-//     width: 563px;
-//     //width: 50%;
- 
-//   }
+}
 // enlevement de CAPS sur le text dans le contact box
 .photo-text {
     text-transform: none !important;
     font-family: $ff-poppins !important;
     font-size: 14px !important;
 }
-
 .photo-details{
     margin-top: 555px;
     border-bottom: 1px solid $color-black;
 }
-
-
 .photo-block img {
-    //margin-top: 50px;
     max-width: 100%; /* Responsive image */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover;
 }
-
 .contact-block {
     margin-top: 0;
     height: 118px; /* Fixed height */
     display: flex;
     align-items: center; /* Center items vertically */
-    //padding: 0 20px; /* Optional padding */
     border-bottom: 1px solid $color-black;
     gap: 150px;
 }
-
-
-
 .previous,
 .next {
     position: relative;
 }
-
 //arrows
 .navigation-arrows {
     margin-left: 400px;
-  }
+}
 .arrows {
     width: 25px;
     position: absolute;
@@ -113,8 +87,6 @@ p {
 .arrow-right {
     left: 30px;
 }
-
-
 .preview {
     opacity: 0 !important; 
     position: absolute;
@@ -125,7 +97,6 @@ p {
 .next:hover .preview {
     opacity: 1 !important; 
 }
-
 .other-photos {
     display: flex;
     flex-direction: column !important;

@@ -16,27 +16,22 @@
 .fa-solid,
 .fa-regular {
     color: white !important;
-    //font-size: 20px !important;
 }
-
 .lightbox-container {
     margin-left: 160px;
     margin-right: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-   // min-height: 100vh;
-   margin-top: 30px;
-   margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
-
 //position de l'image
 .lightbox-container img {
     width: 130vh;
     height: 90vh;
     object-fit: cover;
 }
-
 //icons
 .lightbox-prev,
 .lightbox-next {
@@ -47,15 +42,12 @@
     align-items: center;
     gap: 10px;
 }
-
 .lightbox-next {
     right: 4%;
-
 }
 .lightbox-prev {
     left: 3%;
 }
-
 .lightbox-reference,
 .lightbox-categorie {
     position: fixed;
@@ -65,11 +57,9 @@
     font-family: $ff-space-mono;
     letter-spacing: 2px;
 }
-
 .lightbox-reference {
     left: 19%;
 }
-
 .lightbox-categorie {
     right: 15%;
 }
@@ -79,22 +69,17 @@
     top: 5%;
     right: 7%;
     font-size: 30px;
-
 }
-
 .lightbox-prev,
 .lightbox-next,
 .lightbox-close {
     cursor: pointer;
 }
-
 //hover effects
 .lightbox-next:hover .lightbox-txt, 
 .lightbox-prev:hover .lightbox-txt {
     font-weight: bold; /* Apply bold font weight */
 }
-
-
 .lightbox-next:hover .fa-arrow-right-long,
 .lightbox-prev:hover .fa-arrow-left-long {
     transform: scaleX(1.7); /* Scale the icon */

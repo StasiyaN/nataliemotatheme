@@ -41,14 +41,12 @@
     z-index: 11;
     color: white !important;
 }
-
 .return-title {
     opacity: 0;
     position: absolute;
     bottom: 5px; /* Position at the bottom with some margin */
     left: 10px; /* Position at the left with some margin */
     z-index: 11;
-    
 }
 
 .return-cat {
@@ -57,7 +55,6 @@
     bottom: 5px; /* Position at the bottom with some margin */
     right: 10px; /* Position at the right with some margin */
     z-index: 11;
-
 }
 
 .show-full {
@@ -69,16 +66,12 @@
     padding: 5px 10px;
     border-radius: 15px;
     z-index: 11;
- }
-
- .return-cat,
- .return-title {
+    cursor: pointer;
+}
+.return-cat,
+.return-title {
     color: white;
     text-transform: uppercase;
     font-family: $ff-poppins !important;
     font-size: 14px;
- }
-
- .show-full {
-    cursor: pointer;
- }
+}

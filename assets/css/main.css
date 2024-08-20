@@ -371,17 +371,6 @@ body .page-content.hidden {
     margin-top: -40px;
   }
 }
-@media (max-width: 794px) {
-  #footer ul {
-    flex-direction: column;
-    height: 150px;
-    justify-content: flex-end;
-    padding-left: 0;
-  }
-  li {
-    margin-bottom: 24px;
-  }
-}
 .single-photo {
   max-width: 1440px;
   width: 100%;
@@ -751,6 +740,7 @@ body .page-content.hidden {
   padding: 5px 10px;
   border-radius: 15px;
   z-index: 11;
+  cursor: pointer;
 }
 
 .return-cat,
@@ -759,10 +749,6 @@ body .page-content.hidden {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif !important;
   font-size: 14px;
-}
-
-.show-full {
-  cursor: pointer;
 }
 
 /* Lightbox overlay styles */
@@ -993,6 +979,15 @@ body .page-content.hidden {
     background: white;
     color: white;
     height: 10px;
+  }
+  #footer ul {
+    flex-direction: column;
+    height: 150px;
+    justify-content: flex-end;
+    padding-left: 0;
+  }
+  li {
+    margin-bottom: 24px;
   }
 }
 @media (max-width: 666px) {

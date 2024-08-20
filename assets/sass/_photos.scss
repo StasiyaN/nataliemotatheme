@@ -2,20 +2,17 @@
     width: 564px !important;
     object-fit: cover;
 }
-
 .custom-header {
-background-size: cover;
-background-position: center;
-height: 962px;
-display: flex;
-justify-content: center;
-align-items: center;
+    background-size: cover;
+    background-position: center;
+    height: 962px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 .custom-header img {
     object-fit: cover;
 }
-
 //creation de la taille de photo-thumbnail pour affichage dans front page + single-photo
 .photos {
     display: flex;
@@ -23,14 +20,11 @@ align-items: center;
     flex-wrap: wrap;
     gap: 40px;
 }
-
-
 .photos .photo-item img {
     width: 546px;
     height: 495px;
     object-fit: cover;
 }
-
 .photo-single-unit {
     display: flex;
     flex-direction: row;
